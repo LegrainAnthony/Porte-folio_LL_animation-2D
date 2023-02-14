@@ -1,11 +1,14 @@
 import './App.css';
 import './reset.css'
+import { Route, Routes } from 'react-router-dom';
 
 import Acceuil from './pages/Acceuil/Acceuil';
 
 function App() {
   return (
-    <Acceuil />
+    <Routes>
+      <Route path="/" element={<Acceuil />} />
+    </Routes>
   );
 }
 

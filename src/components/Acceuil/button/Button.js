@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
-import "./Button.css"
-  
+import { ButtonContainer } from "./Button.styme.js";
+
 const Button = () => {
-    return (
-        <div className="container__button">
-            <NavLink to="/portfolio" className="button">Mon portfolio</NavLink>
-        </div> 
-    );
-}
+  return (
+    <ButtonContainer>
+      <NavLink to="/portfolio" className="button">
+        Mon portfolio
+      </NavLink>
+    </ButtonContainer>
+  );
+};
 
 export default Button;

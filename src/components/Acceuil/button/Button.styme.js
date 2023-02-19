@@ -1,11 +1,12 @@
-.container__button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+import styled from "styled-components";
 
-.button {
+export const ButtonContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,9 +17,11 @@
     width: 10em;
     height: 3em;
     transition: 0.5s;
-}
+    position: relative;
+    z-index: 999;
+  }
 
-.button:hover {
+  .button:hover {
     transform: scale(1.5);
-}
-
+  }
+`;

@@ -1,11 +1,11 @@
-import "./Title.css"
+import { TitleContainer } from "./Title.style";
 
 const Title = () => {
-    return (
-        <div className="container__title">
-            <h1 className="name">Levasseur Louise</h1>
-        </div>
-    );
-    }
+  return (
+    <TitleContainer>
+      <h1 className="name">Levasseur Louise</h1>
+    </TitleContainer>
+  );
+};
 
 export default Title;

@@ -10,8 +10,30 @@ const Movie3020 = () => {
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
+  function handleBeforeUnload(event) {
+    // Désactiver la boîte de dialogue d'avertissement par défaut
+    event.preventDefault();
+
+    // Lancer l'animation
+    document.querySelector('#root').classList.add('animate-fadeout');
+
+    // Attendre la fin de l'animation avant de quitter la page
+    setTimeout(() => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.location.href = event.currentTarget.href;
+    }, 1000);
+  }
+
     return (
-      <MovieContainer props={mounted}>
+      <MovieContainer id="root" props={mounted}>
           <PagesContainer props={mounted}>
             <Navigation />
             <Border/>

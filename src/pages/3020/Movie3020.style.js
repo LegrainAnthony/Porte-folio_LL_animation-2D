@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import keyframes from 'styled-components';
 
 export const MovieContainer = styled.div`
   height: 100vh;

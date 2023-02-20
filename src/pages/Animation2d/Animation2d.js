@@ -5,6 +5,7 @@ import { AnimationContainer, PagesContainer } from "./Animation2d.style";
 const Animation2D = () => {
     return (
       <AnimationContainer>
+                       <img className="louise-and-pepsi" src='images\accueil\louise-and-pepsi.png' alt="aaaaaaaa" />
         <PagesContainer>
           <Navigation />
           <Border/>

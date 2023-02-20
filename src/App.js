@@ -1,5 +1,6 @@
 import './App.css';
-import './reset.css'
+import './font.css';
+import './reset.css';
 import { Route, Routes } from 'react-router-dom';
 
 import Accueil from './pages/Accueil/Accueil';

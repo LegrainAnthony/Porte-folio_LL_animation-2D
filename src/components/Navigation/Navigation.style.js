@@ -16,10 +16,11 @@ export const NavigationContainer = styled.div`
     margin-bottom: 1em;
     flex-wrap: wrap;
     height: 100%;
+    letter-spacing: 0.1em;
     
     .name {
       font-size: 2em;
-      margin-bottom: -1.5em;
+      margin-bottom: -1em;
     }
 
     .text {
@@ -37,7 +38,7 @@ export const NavigationContainer = styled.div`
     .navbar__list {
       display: flex;
       justify-content: space-evenly;
-      margin-left: -2em;
+      margin-left: -5em;
       width: 100%;
 
       list-style: none;
@@ -45,7 +46,7 @@ export const NavigationContainer = styled.div`
 
       .navbar__item {
         margin-left: 0.5rem;
-        font-size: 1.5em;
+        font-size: 2em;
         transition: transform 0.3s ease-in-out;
         
         
@@ -55,6 +56,9 @@ export const NavigationContainer = styled.div`
           text-decoration : none;
           color: #8f4646;
           position: relative;
+          font-size: 1.2em;
+          font-weight: 700;
+          letter-spacing: 0.05em;
         }
 
         .navbar__link:after {

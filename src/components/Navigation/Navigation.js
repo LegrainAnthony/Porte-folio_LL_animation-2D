@@ -5,8 +5,8 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <div className="name__container">
-        <h1 className="name AmaticSC">Louise Levasseur</h1>
-        <p className="text AmaticSC">Animation 2D</p>
+        <h1 className="name Boogaloo">Louise Levasseur</h1>
+        <p className="text Boogaloo">Animation 2D</p>
       </div>
       <div className="navbar__container">
         <ul className="navbar__list">

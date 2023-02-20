@@ -1,4 +1,4 @@
-import { BorderContainer } from "./Border.style";
+import BorderContainer from "./Border.style";
 
 const Border = () => {
   return (

@@ -5,6 +5,11 @@ import { ContactContainer, PagesContainer } from "./Contact.style";
 const Contact = () => {
     return (
       <ContactContainer>
+          <img
+            className="louise-and-pepsi"
+            src="../images\accueil\louise-and-pepsi.png"
+            alt="aaaaaaaa"
+          />
         <PagesContainer>
           <Navigation />
           <Border/>

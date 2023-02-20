@@ -8,6 +8,7 @@ import Animation2D from './pages/Animation2d/Animation2d';
 import Movie3020 from './pages/3020/Movie3020';
 import Illustration from './pages/Illustration/Illustration';
 import Contact from './pages/Contact/Contact';
+import Cjmsfv from './pages/CJMSFV/Cjmsfv';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="Movie3020" element={<Movie3020 />} />
       <Route path="Illustration" element={<Illustration />} />
       <Route path="Contact" element={<Contact />} />
+      <Route path="Animation2D/MovieCJMSFV" element={<Cjmsfv />} />
     </Routes>
   );
 }

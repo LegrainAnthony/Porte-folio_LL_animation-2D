@@ -96,6 +96,7 @@ export const AccueilContainer = styled.div`
     
     .image {
       width: 400px;
+      cursor: pointer;
     }
   }
 

@@ -1,4 +1,3 @@
-import Border from "../../components/Border/Border";
 import Navigation from "../../components/Navigation/Navigation";
 import { IllustrationContainer, PagesContainer } from "./Illustration.style";
 
@@ -12,7 +11,6 @@ const Illustration = () => {
         />
           <PagesContainer>
             <Navigation />
-            <Border/>
             <div>Illustration</div>
         </PagesContainer>
       </IllustrationContainer>

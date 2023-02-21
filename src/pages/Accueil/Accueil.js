@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Border from "../../components/Border/Border";
 import Navigation from "../../components/Navigation/Navigation";
 import { AccueilContainer, PagesContainer } from "./Accueil.style";
 
@@ -8,7 +7,6 @@ function Acceuil() {
     <AccueilContainer>
       <PagesContainer>
         <Navigation />
-        <Border />
         <div className="title__container" >
           <h2 className="title AmaticSC" >Bienvenue !</h2>
         </div>
@@ -39,7 +37,7 @@ function Acceuil() {
           <img className="pad pad-left" src="images\accueil\coussinetRight.png" alt="" />
         </div>
         <div className="image__container" >
-        <img className="image" src='images\accueil\louise.png' alt="aaaaaaaa" />
+        <a href="/images/cv.pdf" download="/images/cv.pdf"><img className="image" src='images\accueil\louise.png' alt="aaaaaaaa" /></a>
         </div>
 
       </PagesContainer>

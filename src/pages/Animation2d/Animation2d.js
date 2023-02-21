@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Border from "../../components/Border/Border";
 import Navigation from "../../components/Navigation/Navigation";
 import { AnimationContainer, PagesContainer } from "./Animation2d.style";
 
@@ -13,38 +12,44 @@ const Animation2D = () => {
       />
       <PagesContainer>
         <Navigation />
-        <Border />
-        <div>
-          <h2>Animation2D</h2>
+        
+        <div className="animation__text__container">
+          <h2 className="animation__text Boogaloo">Animation2D</h2>
         </div>
-        <div>
-          <h3>Demo Reel 2023</h3>
+        <div className="demo__text__container">
+          <h3 className="demo__text AmaticSC">Demo Reel 2023</h3>
         </div>
-        <div>
-          <video
+        <div className="video_container">
+          <video className="video"
             width="750"
             height="500"
             controls
             poster="images\accueil\louise-and-pepsi.png"
           >
-            <source
+            <source className="source-video"
               src="videos/A5A_Levasseur_Louise_DemoReel_2023.mp4"
               type="video/mp4"
             />
           </video>
         </div>
-        <div>
-          <p>
+        <div className="text__container">
+          <p className="paragraph AmaticSC">
             Retrouvez aussi :
           </p>
         </div>
-        <div>
-          <Link to="MovieCJMSFV" className="">
-            Comment je me suis fais virer
+        <div className="link_container">
+          <div className="container-link-1" >
+          <span className="span1" >1</span>
+          <Link to="MovieCJMSFV" className="link">
+            <img className="CJSFV-img" src="Images/CJMSFV.png" alt="" />
           </Link>
-          <Link to="Movie3020" className="">
-            3020
+          </div>
+          <div className="container-link-2" >
+            <span className="span2" >2</span>
+          <Link to="Movie3020" className="link">
+          <img className="3020-img" src="Images/movie3020.png" alt="" />
           </Link>
+            </div>
         </div>
       </PagesContainer>
     </AnimationContainer>

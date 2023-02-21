@@ -3,11 +3,17 @@ import styled from "styled-components";
 export const NavigationContainer = styled.div`
   width: 100%;
   height: 7rem;
+  padding-top: 1em;
   display: flex;
   align-items: center;
-  margin-top: 0.8em;
   color: #8f4646;
+  background-color: #ffebeb;
+  position: sticky;
+  top: 0;
+  border-bottom: 1.5px solid #8f4646;
+  z-index: 999;
 
+  
   .name__container {
     display: flex;
     align-items: center;

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
+    <>
     <NavigationContainer>
       <div className="name__container">
         <h1 className="name Boogaloo">Louise Levasseur</h1>
@@ -37,7 +38,11 @@ const Navigation = () => {
           </li>
         </ul>
       </div>
+      <div>
+        <div className="border" ></div>
+      </div>
     </NavigationContainer>
+      </>
   );
 };
 

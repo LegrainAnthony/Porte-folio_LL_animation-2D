@@ -1,6 +1,5 @@
 import CjmsfvContainer from "./Cjmsfv.style";
 import { PagesContainer } from "./Cjmsfv.style";
-import Border from "../../components/Border/Border";
 import Navigation from "../../components/Navigation/Navigation";
 
 const Cjmsfv = () => {
@@ -13,7 +12,6 @@ const Cjmsfv = () => {
         />
       <PagesContainer>
         <Navigation />
-        <Border />
         <div>
           <h2>Animation 2D</h2>
         </div>

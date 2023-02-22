@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const IllustrationContainer = styled.div`
+  height: 100vh;
   display: flex;
   justify-content: center;
   background-color: #ffe0e0;

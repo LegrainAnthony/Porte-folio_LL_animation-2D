@@ -7,10 +7,14 @@ export const NavigationContainer = styled.div`
   display: flex;
   align-items: center;
   color: #8f4646;
+  color: ${(props) => (props.props.props === true ? '#fff' : '#8f4646')};
   background-color: #ffebeb;
+  background-color: ${(props) => (props.props.props === true ? '#32335e' : '#ffebeb')};
+  transition: background-color 0.3s ease-in-out;
   position: sticky;
   top: 0;
   border-bottom: 1.5px solid #8f4646;
+  border-color: ${(props) => (props.props.props === true ? '#fff' : '#8f4646')}; ;
   z-index: 999;
 
   
@@ -31,6 +35,7 @@ export const NavigationContainer = styled.div`
 
     .text {
         font-size: 2em;
+        color: ${(props) => (props.props.props === true ? '#fff' : '#8f4646')};
     }
   }
 
@@ -61,6 +66,7 @@ export const NavigationContainer = styled.div`
           list-style: none;
           text-decoration : none;
           color: #8f4646;
+          color: ${(props) => (props.props.props === true ? '#fff' : '#8f4646')};
           position: relative;
           font-size: 1.2em;
           font-weight: 700;
@@ -74,6 +80,7 @@ export const NavigationContainer = styled.div`
         width: 0%;
         height: 2px;
         background-color: #8f4646;
+        background-color: ${(props) => (props.props.props === true ? '#fff' : '#8f4646')};
         transition: 0.2s ease-in-out;
       }
 
@@ -83,4 +90,8 @@ export const NavigationContainer = styled.div`
     }
   }
 }
-`;
+
+.image-title-movie{
+  width: 60px;
+}
+`; 

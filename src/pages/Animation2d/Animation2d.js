@@ -14,7 +14,7 @@ const Animation2D = () => {
         <Navigation />
         
         <div className="animation__text__container">
-          <h2 className="animation__text Boogaloo">Animation2D</h2>
+          <h2 className="animation__text Boogaloo">Animation 2D</h2>
         </div>
         <div className="demo__text__container">
           <h3 className="demo__text AmaticSC">Demo Reel 2023</h3>
@@ -22,9 +22,9 @@ const Animation2D = () => {
         <div className="video_container">
           <video className="video"
             width="750"
-            height="500"
+            height="430"
             controls
-            poster="images\accueil\louise-and-pepsi.png"
+            poster="videos\Book_Miniature.png"
           >
             <source className="source-video"
               src="videos/A5A_Levasseur_Louise_DemoReel_2023.mp4"
@@ -34,20 +34,20 @@ const Animation2D = () => {
         </div>
         <div className="text__container">
           <p className="paragraph AmaticSC">
-            Retrouvez aussi :
+          Retrouvez ici deux de mes projets :
           </p>
         </div>
         <div className="link_container">
           <div className="container-link-1" >
-          <span className="span1" >1</span>
+          <span className=" span1 TitanOne" >1 .</span>
           <Link to="MovieCJMSFV" className="link">
-            <img className="CJSFV-img" src="Images/CJMSFV.png" alt="" />
+            <img className="CJSFV-img span" src="Images/CJMSFV.png" alt="" />
           </Link>
           </div>
           <div className="container-link-2" >
-            <span className="span2" >2</span>
-          <Link to="Movie3020" className="link">
-          <img className="3020-img" src="Images/movie3020.png" alt="" />
+            <span className="span2 TitanOne" >2 .</span>
+          <Link to="../Movie3020" className="link">
+          <img className="movie3020-img span" src="Images/movie3020.png" alt="" />
           </Link>
             </div>
         </div>

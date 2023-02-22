@@ -12,29 +12,31 @@ const Cjmsfv = () => {
         />
       <PagesContainer>
         <Navigation />
-        <div>
-          <h2>Animation 2D</h2>
+        <div className="animation__text__container">
+          <h2 className="animation__text Boogaloo">Animation 2D</h2>
         </div>
-        <div>
-          <h3>Cjmsfv</h3>
+        <div className="demo__text__container">
+        <img className="CJSFV-img" src="../Images/CJMSFV.png" alt="" />
         </div>
-        <div>
-          <video
+        <div className="video_container">
+          <video className="video"
             width="750"
-            height="500"
+            height="430"
             controls
-            poster="../Videos\CJMSFV.jpg"
+            poster="../Videos\cjmsfv_Miniature.png"
           >
-            <source src="../Videos\CJMSFV.mp4" type="video/mp4" />
+            <source className="source-video"
+              src="../Videos/CJMSFV.mp4"
+              type="video/mp4"
+            />
           </video>
         </div>
-        <div>
-          <p>
-            Mon tout premier vrai court-métrage réalisé pour la fin de mon
+        <div className="text__container">
+          <p className="paragraph MontserratAlternates">
+          Mon tout premier vrai court-métrage réalisé pour la fin de mon
             bachelor à l'ECV Bordeaux, le tout en 1 mois, par groupe de 3. Un
             premier défi riche en émotion et une grande satisfaction à la fin.
-            Au côté d'Esther Coulais (ig : swyster) et de Maud Roger (ig :
-            mopsdeg), nous avons raconter l'histoire d'un vampire qui monte sur
+            Au côté d'<a className="link-name" href="https://www.artstation.com/esthercoulais" target="_blank"  rel="noopener noreferrer">Esther Coulais</a> et de <a className="link-name" href="https://maudpotatoes.wixsite.com/portfolio" target="_blank"  rel="noopener noreferrer">Maud Roger</a>, nous avons raconter l'histoire d'un vampire qui monte sur
             scène, mais qui finit en cendre.
           </p>
         </div>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 const CjmsfvContainer = styled.div`
-height: 100vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -106,12 +106,28 @@ height: 100vh;
   .CJSFV-img {
     width: 400px;
   }
+
+  @media screen and (max-width: 425px) {
+    .video {
+      width: 90%;
+      height: 90%;
+    }
+    .CJSFV-img {
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .CJSFV-img {
+      width: 300px;
+    }
+  }
 `;
 
 export const PagesContainer = styled.div`
   width: 65%;
   height: 100%;
   background-color: #ffebeb;
+  overflow-y: scroll;
 
   @media screen and (max-width: 1520px) {
     width: 75%;
@@ -143,6 +159,10 @@ export const PagesContainer = styled.div`
       }
 
     }
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
   }
   `;
 

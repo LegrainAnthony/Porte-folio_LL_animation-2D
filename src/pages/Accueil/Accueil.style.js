@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const AccueilContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   background-color: #ffe0e0;
@@ -100,9 +99,103 @@ export const AccueilContainer = styled.div`
     }
   }
 
+  @media screen and (max-width: 1520px) {
+  }
+
+  @media screen and (max-width: 1024) {
+  }
+  @media screen and (max-width: 768px) {
+
+    .title__container {
+
+    .title {
+      font-size: 2.5em;
+    }
+  }
+
+    .paragraph__container {
+    padding: 3em;
+    text-align: center;
+    font-size: 1.15em;
+    line-height: 28px;
+    font-weight: 400;
+    color: #8f4646;
+    .paragraph1  {
+      margin-bottom: 1em;
+      width: 45em;
+    }
+
+    .paragraph2  {
+      width: 30em;
+      margin-bottom: 1em;
+    }
+
+    .paragraph3  {
+      width: 30em;
+    }
+
+  }
+
+    .image__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3.1em;
+    
+    .image {
+      width: 350px;
+      cursor: pointer;
+    }
+  }
+
+  }
+
+  @media screen and (max-width: 411px) {
+    
+  }
+  @media screen and (max-width: 375px) {
+    
+  }
+  @media screen and (max-width: 360px) {
+    
+  }
+
 `;
 
 export const PagesContainer = styled.div`
   width: 65%;
+  height: 100%;
   background-color: #ffebeb;
+
+  @media screen and (max-width: 1520px) {
+    width: 75%;
+  }
+
+  @media screen and (max-width: 1366px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 411px) {
+    
+  }
+  @media screen and (max-width: 375px) {
+    
+  }
+  @media screen and (max-width: 320px) {
+    
+    .image__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3.1em;
+    
+      .image {
+        width: 300px;
+        cursor: pointer;
+      }
+
+    }
+  }
 `;

@@ -37,7 +37,7 @@ function Acceuil() {
           <img className="pad pad-left" src="images\accueil\coussinetRight.png" alt="" />
         </div>
         <div className="image__container" >
-        <a href="/images/cv.pdf" download="/images/cv.pdf"><img className="image" src='images\accueil\louise.png' alt="aaaaaaaa" /></a>
+        <img className="image" src='images\accueil\louise.png' alt="aaaaaaaa" />
         </div>
 
       </PagesContainer>

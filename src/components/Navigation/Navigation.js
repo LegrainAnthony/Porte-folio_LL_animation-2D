@@ -1,11 +1,20 @@
 import { NavigationContainer } from "./Navigation.style";
+import { useState } from "react";
+import { MenuOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 const Navigation = (mounted) => {
-  console.log(mounted.props);
+
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+  
+  console.log(open);
   return (
     <>
-    <NavigationContainer props={mounted}>
+    <NavigationContainer props={{mounted, open}}>
       <div className="name__container">
         <h1 className="name Boogaloo">Louise Levasseur</h1>
         <p className="text Boogaloo">Animation 2D</p>
@@ -52,6 +61,7 @@ const Navigation = (mounted) => {
       <div>
         <div className="border" ></div>
       </div>
+      <div className="burger__button" onClick={handleClick} ><MenuOutlined /></div>
     </NavigationContainer>
       </>
   );

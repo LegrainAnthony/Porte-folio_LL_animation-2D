@@ -91,7 +91,7 @@ const Illustration = () => {
     <IllustrationContainer>
       <img
         className="louise-and-pepsi"
-        src="../images\accueil\louise-and-pepsi.png"
+        src="../images/accueil/louise-and-pepsi.png"
         alt="aaaaaaaa"
       />
       <PagesContainer>

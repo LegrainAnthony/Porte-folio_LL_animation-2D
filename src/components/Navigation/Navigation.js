@@ -7,6 +7,8 @@ const Navigation = (mounted) => {
 
   const [open, setOpen] = useState(false);
 
+  const setColor = mounted.mounted
+    
   const handleClick = () => {
     setOpen(!open);
   };
@@ -17,11 +19,9 @@ const Navigation = (mounted) => {
       handleClick();
     }
   }
-  
-  console.log(open);
   return (
     <>
-    <NavigationContainer props={{mounted, open}}>
+    <NavigationContainer props={{setColor, open}}>
     {open === true && <div className="exitDiv" onClick={handleClick}></div>}
       <div className="name__container">
         <h1 className="name Boogaloo">Louise Levasseur</h1>
@@ -40,7 +40,7 @@ const Navigation = (mounted) => {
             </Link>
           </li>
           <li className="navbar__item">
-          {mounted.props === true ?
+          {setColor === true ?
             <Link className="navbar__link AmaticSC" to="/"  onClick={currentPage}>
             <img
             className="image-title-movie"

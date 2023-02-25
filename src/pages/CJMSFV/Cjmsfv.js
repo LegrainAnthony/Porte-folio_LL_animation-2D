@@ -7,7 +7,7 @@ const Cjmsfv = () => {
     <CjmsfvContainer>
         <img
             className="louise-and-pepsi"
-            src="../images\accueil\louise-and-pepsi.png"
+            src="../images/accueil/louise-and-pepsi.png"
             alt="aaaaaaaa"
         />
       <PagesContainer>
@@ -16,17 +16,17 @@ const Cjmsfv = () => {
           <h2 className="animation__text Boogaloo">Animation 2D</h2>
         </div>
         <div className="demo__text__container">
-        <img className="CJSFV-img" src="../Images/CJMSFV.png" alt="" />
+        <img className="CJSFV-img" src="../images/CJMSFV.png" alt="" />
         </div>
         <div className="video_container">
           <video className="video"
             width="750"
             height="430"
             controls
-            poster="../Videos\cjmsfv_Miniature.png"
+            poster="../videos/cjmsfv_Miniature.png"
           >
             <source className="source-video"
-              src="../Videos/CJMSFV.mp4"
+              src="../videos/CJMSFV.mp4"
               type="video/mp4"
             />
           </video>

@@ -7,7 +7,7 @@ const Animation2D = () => {
     <AnimationContainer>
       <img
         className="louise-and-pepsi"
-        src="images\accueil\louise-and-pepsi.png"
+        src="images/accueil/louise-and-pepsi.png"
         alt="aaaaaaaa"
       />
       <PagesContainer>
@@ -24,7 +24,7 @@ const Animation2D = () => {
             width="750"
             height="430"
             controls
-            poster="videos\Book_Miniature.png"
+            poster="videos/Book_Miniature.png"
           >
             <source className="source-video"
               src="videos/A5A_Levasseur_Louise_DemoReel_2023.mp4"
@@ -41,13 +41,13 @@ const Animation2D = () => {
           <div className="container-link-1" >
           <span className=" span1 TitanOne" >1 .</span>
           <Link to="MovieCJMSFV" className="link">
-            <img className="CJSFV-img span" src="Images/CJMSFV.png" alt="" />
+            <img className="CJSFV-img span" src="images/CJMSFV.png" alt="" />
           </Link>
           </div>
           <div className="container-link-2" >
             <span className="span2 TitanOne" >2 .</span>
           <Link to="../Movie3020" className="link">
-          <img className="movie3020-img span" src="Images/movie3020.png" alt="" />
+          <img className="movie3020-img span" src="images/movie3020.png" alt="" />
           </Link>
             </div>
         </div>

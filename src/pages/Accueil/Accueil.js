@@ -27,17 +27,17 @@ function Acceuil() {
         </div>
         <div className="demo__container" >
         <div className="arrow__container" >
-          <img  className="pad pad-right" src="images\accueil\coussinetLeft.png" alt="" />
+          <img  className="pad pad-right" src="images/accueil/coussinetLeft.png" alt="" />
         </div>
         <div className="demoreel__container" >
           <Link to="Animation2D" className="demoreel AmaticSC">Ma demoreel</Link>
         </div>
         <div className="arrow__container" >
         </div>
-          <img className="pad pad-left" src="images\accueil\coussinetRight.png" alt="" />
+          <img className="pad pad-left" src="images/accueil/coussinetRight.png" alt="" />
         </div>
         <div className="image__container" >
-        <img className="image" src='images\accueil\louise.png' alt="aaaaaaaa" />
+        <img className="image" src='images/accueil/louise.png' alt="aaaaaaaa" />
         </div>
 
       </PagesContainer>

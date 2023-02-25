@@ -47,12 +47,12 @@ const Movie3020 = () => {
     <MovieContainer props={mounted}>
       <img
         className="louise-and-pepsi-glitched"
-        src="images\louise-glitch.png"
+        src="images/louise-glitch.png"
         alt="aaaaaaaa"
       />
-      <img className="eyes" src="images\eyes.png" alt="aaaaaaaa" />
+      <img className="eyes" src="images/eyes.png" alt="aaaaaaaa" />
       <PagesContainer props={mounted}>
-        <Navigation props={mounted} />
+        <Navigation mounted={mounted} />
         {/* <div class="glitch-bloc">
             <p class="invisible-text">Movie3020</p>
             <p class="glitchedAnim">Movie3020</p>
@@ -158,7 +158,7 @@ const Movie3020 = () => {
                 <video className="video" width="750" height="430" controls>
                   <source
                     className="source-video"
-                    src="videos\Compilation_Anim_Rough.mp4"
+                    src="videos/Compilation_Anim_Rough.mp4"
                     type="video/mp4"
                   />
                 </video>
@@ -173,7 +173,7 @@ const Movie3020 = () => {
                 <video className="video" width="750" height="430" controls>
                   <source
                     className="source-video"
-                    src="videos\Composition1.mp4"
+                    src="videos/Composition1.mp4"
                     type="video/mp4"
                   />
                 </video>

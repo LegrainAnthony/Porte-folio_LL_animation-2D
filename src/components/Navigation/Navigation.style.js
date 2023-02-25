@@ -9,15 +9,15 @@ export const NavigationContainer = styled.div`
   display: flex;
   align-items: center;
   color: #8f4646;
-  color: ${(props) => (props.props.props === true ? "#fff" : "#8f4646")};
+  color: ${(props) => (props.props.setColor === true ? "#fff" : "#8f4646")};
   background-color: #ffebeb;
   background-color: ${(props) =>
-    props.props.props === true ? "#32335e" : "#ffebeb"};
+  props.props.setColor === true ? "#32335e" : "#ffebeb"};
   transition: background-color 0.3s ease-in-out;
   position: sticky;
   top: 0;
   border-bottom: 1.5px solid #8f4646;
-  border-color: ${(props) => (props.props.props === true ? "#fff" : "#8f4646")};
+  border-color: ${(props) => (props.props.setColor === true ? "#fff" : "#8f4646")};
   z-index: 999;
 
 
@@ -38,7 +38,7 @@ export const NavigationContainer = styled.div`
 
     .text {
       font-size: 2em;
-      color: ${(props) => (props.props.props === true ? "#fff" : "#8f4646")};
+      color: ${(props) => (props.props.setColor === true ? "#fff" : "#8f4646")};
     }
   }
 
@@ -68,7 +68,7 @@ export const NavigationContainer = styled.div`
           text-decoration: none;
           color: #8f4646;
           color: ${(props) =>
-            props.props.props === true ? "#fff" : "#8f4646"};
+            props.props.setColor === true ? "#fff" : "#8f4646"};
           position: relative;
           font-size: 1.2em;
           font-weight: 700;
@@ -83,7 +83,7 @@ export const NavigationContainer = styled.div`
           height: 2px;
           background-color: #8f4646;
           background-color: ${(props) =>
-            props.props.props === true ? "#fff" : "#8f4646"};
+            props.props.setColor === true ? "#fff" : "#8f4646"};
           transition: 0.2s ease-in-out;
         }
 
@@ -101,30 +101,6 @@ export const NavigationContainer = styled.div`
   .image-title-movie {
     width: 60px;
   }
-
-  @media screen and (max-width: 1520px) {
-    .name__container {
-      .name {
-      }
-
-      .text {
-      }
-    }
-
-    .navbar__container {
-      .navbar__list {
-        .navbar__item {
-          .navbar__link {
-          }
-
-          .navbar__link:after {
-          }
-
-          .navbar__link:hover::after {
-          }
-        }
-      }
-    }
 
     @media screen and (max-width: 1366px) {
       .name__container {
@@ -170,16 +146,6 @@ export const NavigationContainer = styled.div`
           margin-left: -2em;
           .navbar__item {
             font-size: 1.7em;
-
-            .navbar__link {
-            }
-
-            .navbar__link:after {
-            }
-
-            .navbar__link:hover::after {
-            }
-          }
         }
       }
     }
@@ -200,15 +166,6 @@ export const NavigationContainer = styled.div`
 
           .navbar__item {
             font-size: 1.5em;
-
-            .navbar__link {
-            }
-
-            .navbar__link:after {
-            }
-
-            .navbar__link:hover::after {
-            }
           }
         }
       }
@@ -277,12 +234,6 @@ export const NavigationContainer = styled.div`
           .navbar__link {
             color: #fff;
           }
-
-          .navbar__link:after {
-          }
-
-          .navbar__link:hover::after {
-          }
         }
       }
     }
@@ -325,17 +276,6 @@ export const NavigationContainer = styled.div`
           font-size: 1.8em;
           margin: 0.5em;
           margin-left: 25%;
-
-
-          .navbar__link {
-            color: #fff;
-          }
-
-          .navbar__link:after {
-          }
-
-          .navbar__link:hover::after {
-          }
         }
       }
     }
@@ -379,17 +319,6 @@ export const NavigationContainer = styled.div`
           font-size: 1.7em;
           margin: 0.5em;
           margin-left: 24%;
-
-
-          .navbar__link {
-            color: #fff;
-          }
-
-          .navbar__link:after {
-          }
-
-          .navbar__link:hover::after {
-          }
         }
       }
     }

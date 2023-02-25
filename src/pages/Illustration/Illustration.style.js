@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const IllustrationContainer = styled.div`
-  height: 100vh;
   display: flex;
+  height: 100vh;
   justify-content: center;
   background-color: #ffe0e0;
 
@@ -53,5 +53,27 @@ export const IllustrationContainer = styled.div`
 
 export const PagesContainer = styled.div`
   width: 65%;
+  height: 100%;
   background-color: #ffebeb;
-`;
+  overflow-y: scroll;
+
+  @media screen and (max-width: 1520px) {
+    width: 75%;
+  }
+
+  @media screen and (max-width: 1366px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 411px) {
+    
+  }
+  @media screen and (max-width: 375px) {
+    
+  }
+  @media screen and (max-width: 320px) {
+    
+  }
+  `;

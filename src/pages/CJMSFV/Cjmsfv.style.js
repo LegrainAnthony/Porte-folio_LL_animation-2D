@@ -110,13 +110,40 @@ height: 100vh;
 
 export const PagesContainer = styled.div`
   width: 65%;
+  height: 100%;
   background-color: #ffebeb;
-  overflow-y: scroll;
-  
 
-  ::-webkit-scrollbar {
-    width: 0px;
+  @media screen and (max-width: 1520px) {
+    width: 75%;
   }
-`;
+
+  @media screen and (max-width: 1366px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 411px) {
+    
+  }
+  @media screen and (max-width: 375px) {
+    
+  }
+  @media screen and (max-width: 320px) {
+    
+    .image__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3.1em;
+    
+      .image {
+        width: 300px;
+        cursor: pointer;
+      }
+
+    }
+  }
+  `;
 
 export default CjmsfvContainer;

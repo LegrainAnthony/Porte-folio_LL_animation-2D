@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const AnimationContainer = styled.div`
   height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   background-color: #ffe0e0;
@@ -119,15 +118,127 @@ export const AnimationContainer = styled.div`
     }
     
   }
+
+  @media screen and (max-width: 1520px) {
+    
+  }
+
+  @media screen and (max-width: 1366px) {
+    
+  }
+  @media screen and (max-width: 768px) {
+   
+  }
+  @media screen and (max-width: 425px) {
+
+.video {
+  width: 90%;
+  height: 90%;
+}
+
+.text__container {
+  .paragraph {
+    font-size: 2em;
+  }
+}
+
+.container-link-1 {
+
+  .span1 {
+    font-size: 1.5em;
+  }
+    .CJSFV-img {
+      width: 300px;
+    }
+
+  }
+
+  .container-link-2 {
+    margin-right : 3em;
+  .span2 {
+  font-size: 1.5em;
+}
+  .movie3020-img {
+    width: 200px;
+  }
+}
+}
+  @media screen and (max-width: 375px) {
+    
+  }
+  @media screen and (max-width: 320px) {
+
+  .text__container {
+    .paragraph {
+      font-size: 1.5em;
+    }
+  }
+
+  .container-link-1 {
+
+    .span1 {
+      font-size: 1.5em;
+    }
+      .CJSFV-img {
+        width: 250px;
+      }
+
+    }
+
+    .container-link-2 {
+      margin-right : 3em;
+    .span2 {
+    font-size: 1.5em;
+  }
+    .movie3020-img {
+      width: 150px;
+    }
+  }
+  }
 `;
 
 export const PagesContainer = styled.div`
   width: 65%;
+  height: 100%;
   background-color: #ffebeb;
   overflow-y: scroll;
+
+  @media screen and (max-width: 1520px) {
+    width: 75%;
+  }
+
+  @media screen and (max-width: 1366px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
   
+  @media screen and (max-width: 425px) {
+
+  }
+    
+  @media screen and (max-width: 375px) {
+    
+  }
+  @media screen and (max-width: 320px) {
+    
+    .image__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3.1em;
+    
+      .image {
+        width: 300px;
+        cursor: pointer;
+      }
+
+    }
+  }
 
   ::-webkit-scrollbar {
     width: 0px;
   }
-`;
+  
+  `;

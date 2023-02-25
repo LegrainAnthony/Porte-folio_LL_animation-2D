@@ -20,6 +20,7 @@ export const NavigationContainer = styled.div`
   border-color: ${(props) => (props.props.props === true ? "#fff" : "#8f4646")};
   z-index: 999;
 
+
   .name__container {
     display: flex;
     align-items: center;
@@ -219,18 +220,24 @@ export const NavigationContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
-    
+
+    .exitDiv {
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 9;
+    }
+
+        
     .burger__button {
       color: #8f4646;
       color: ${(props) => (props.props.open === true ? "#fff" : "8f4646")};
       display: block;
       z-index: 99;
       font-size: 2em;
-      
     }
     .name__container {
-      height: 100%;
       flex-direction: column;
       justify-content: space-around;
       margin-left: 5em;

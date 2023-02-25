@@ -49,6 +49,7 @@ font-family: 'Titan One', cursive; */
     position: absolute;
     right: 0;
     top: 220px;
+
 }
 
 
@@ -59,5 +60,31 @@ font-family: 'Titan One', cursive; */
     top: 0px;
 }
 
+@media screen and (max-width: 1520px) {
+    .louise-and-pepsi {
+        width: 200px;
+        position: absolute;
+        right: 0;
+        top: 280px;
+    }
+}
 
+@media screen and (max-width: 1366px) {
+    .louise-and-pepsi {
+        display: none;
+    }
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 411px) {
+
+}
+@media screen and (max-width: 375px) {
+
+}
+@media screen and (max-width: 320px) {
+
+}
 

@@ -19,6 +19,7 @@ export const NavigationContainer = styled.div`
   border-bottom: 1.5px solid #8f4646;
   border-color: ${(props) => (props.props.mounted === true ? "#fff" : "#8f4646")};
   z-index: 999;
+  background-color: #fff;
 
 
   .name__container {

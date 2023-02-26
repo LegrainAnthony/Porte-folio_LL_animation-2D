@@ -54,13 +54,72 @@ export const ContactContainer = styled.div`
     }
   }
   .imgLP2__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 0;
-    left: 450px;
-
+    width: 65%;
     .imgLP2 {
       width: 1000px;
     }
+  }
+
+  @media screen and (max-width: 1520px) {
+    .imgLP2__container {
+    width: 75%;
+    .imgLP2 {
+      width: 900px;
+    }
+  }
+
+  }
+
+  @media screen and (max-width: 1366px) {
+
+    .imgLP2__container {
+    width: 80%;
+    .imgLP2 {
+      width: 800px;
+    }
+  }
+
+  }
+  @media screen and (max-width: 768px) {
+    .imgLP2__container {
+    width: 100%;
+    .imgLP2 {
+      width: 700px;
+    }
+  }
+
+  }
+  @media screen and (max-width: 425px) {
+    .imgLP2__container {
+    .imgLP2 {
+      width: 400px;
+    }
+  }
+    
+  }
+  @media screen and (max-width: 375px) {
+
+    .imgLP2__container {
+    .imgLP2 {
+      width: 350px;
+    }
+  }
+    
+  }
+  @media screen and (max-width: 320px) {
+
+    
+    .imgLP2__container {
+    .imgLP2 {
+      width: 300px;
+    }
+  }
+
   }
 `;
 

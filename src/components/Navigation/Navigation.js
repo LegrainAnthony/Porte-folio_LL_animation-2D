@@ -3,25 +3,24 @@ import { useState } from "react";
 import { MenuOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-const Navigation = (mounted) => {
+const Navigation = ({mounted}) => {
 
   const [open, setOpen] = useState(false);
-
-  const setColor = mounted.mounted
-    
   const handleClick = () => {
     setOpen(!open);
   };
 
-  const currentPage = (e) => {
+  const closeBurgerCurrentPage = (e) => {
     let loc = window.location.pathname;
     if (loc === e.target.getAttribute("href")) {
       handleClick();
     }
   }
+
+  console.log(mounted);
   return (
     <>
-    <NavigationContainer props={{setColor, open}}>
+    <NavigationContainer props={{mounted, open}}>
     {open === true && <div className="exitDiv" onClick={handleClick}></div>}
       <div className="name__container">
         <h1 className="name Boogaloo">Louise Levasseur</h1>
@@ -30,18 +29,18 @@ const Navigation = (mounted) => {
       <div className="navbar__container">
         <ul className="navbar__list">
           <li className="navbar__item">
-            <Link className="navbar__link AmaticSC" to="/" onClick={currentPage}>
+            <Link className="navbar__link AmaticSC" to="/" onClick={closeBurgerCurrentPage}>
               Accueil
             </Link>
           </li>
           <li className="navbar__item">
-            <Link className="navbar__link AmaticSC" to="/Animation2D"  onClick={currentPage}>
+            <Link className="navbar__link AmaticSC" to="/Animation2D"  onClick={closeBurgerCurrentPage}>
             Animation 2D
             </Link>
           </li>
           <li className="navbar__item">
-          {setColor === true ?
-            <Link className="navbar__link AmaticSC" to="/"  onClick={currentPage}>
+          {mounted === true ?
+            <Link className="navbar__link AmaticSC" to="/"  onClick={closeBurgerCurrentPage}>
             <img
             className="image-title-movie"
             src="images/3020.png"
@@ -49,18 +48,18 @@ const Navigation = (mounted) => {
             />
             </Link>
             :
-            <Link className="navbar__link AmaticSC" to="/Movie3020"  onClick={currentPage}>
+            <Link className="navbar__link AmaticSC" to="/Movie3020"  onClick={closeBurgerCurrentPage}>
             3020
             </Link>      
             }
           </li>
           <li className="navbar__item">
-            <Link className="navbar__link AmaticSC" to="/Illustration"  onClick={currentPage}>
+            <Link className="navbar__link AmaticSC" to="/Illustration"  onClick={closeBurgerCurrentPage}>
             illustration
             </Link>
           </li>
           <li className="navbar__item">
-            <Link className="navbar__link AmaticSC" to="/Contact"  onClick={currentPage}>
+            <Link className="navbar__link AmaticSC" to="/Contact"  onClick={closeBurgerCurrentPage}>
             Contact
             </Link>
           </li>

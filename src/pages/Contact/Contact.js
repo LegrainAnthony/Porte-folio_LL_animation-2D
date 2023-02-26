@@ -1,11 +1,17 @@
 import Navigation from "../../components/Navigation/Navigation";
 import { ContactContainer, PagesContainer } from "./Contact.style";
+import { useEffect } from 'react';
 
-const Contact = () => {
+const Contact = ({getTheCurrentPage, mounted}) => {
+
+  useEffect(() => {
+    getTheCurrentPage();
+  }, []);
+
     return (
       <ContactContainer>
         <PagesContainer>
-          <Navigation />
+          <Navigation mounted={mounted} />
           <div className="contact__container">
             <h2 className="contact__text Boogaloo">Contact</h2>
           </div>

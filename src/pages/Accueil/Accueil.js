@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
 import Navigation from "../../components/Navigation/Navigation";
 import { AccueilContainer, PagesContainer } from "./Accueil.style";
+import { useEffect, useState } from "react";
 
-function Acceuil() {
+function Acceuil({ getTheCurrentPage, mounted}) {
+
+  useEffect(() => {
+    getTheCurrentPage();
+  }, []);
+
+  console.log(mounted, "mounted");
+
   return (
     <AccueilContainer>
       <PagesContainer>
-        <Navigation />
+        <Navigation mounted={mounted} />
         <div className="title__container" >
           <h2 className="title AmaticSC" >Bienvenue !</h2>
         </div>

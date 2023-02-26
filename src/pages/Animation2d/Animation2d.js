@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import Navigation from "../../components/Navigation/Navigation";
 import { AnimationContainer, PagesContainer } from "./Animation2d.style";
+import { useEffect } from "react";
 
-const Animation2D = () => {
+const Animation2D = ({getTheCurrentPage, mounted}) => {
+
+  useEffect(() => {
+    getTheCurrentPage();
+  }, []);
+
   return (
     <AnimationContainer>
       <img
@@ -11,7 +17,7 @@ const Animation2D = () => {
         alt="aaaaaaaa"
       />
       <PagesContainer>
-        <Navigation />
+        <Navigation mounted={mounted} />
         
         <div className="animation__text__container">
           <h2 className="animation__text Boogaloo">Animation 2D</h2>

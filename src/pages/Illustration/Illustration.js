@@ -2,8 +2,13 @@ import Navigation from "../../components/Navigation/Navigation";
 import { IllustrationContainer, PagesContainer } from "./Illustration.style";
 import { Image } from 'antd';
 import { useState } from 'react';
+import { useEffect } from "react";
 
-const Illustration = () => {
+const Illustration = ({ getTheCurrentPage, mounted }) => {
+
+  useEffect (() => {
+    getTheCurrentPage();
+  }, []);
 
   let illustrations = [
     {
@@ -95,7 +100,7 @@ const Illustration = () => {
         alt="aaaaaaaa"
       />
       <PagesContainer>
-        <Navigation />
+        <Navigation mounted={mounted} />
         <div className="Illustration__text__container">
           <h2 className="Illustration__text Boogaloo">Illustration</h2>
         </div>

@@ -3,11 +3,10 @@ import { MovieContainer, PagesContainer } from "./Movie3020.style";
 import { useState, useEffect } from "react";
 import "./glitch.css";
 
-const Movie3020 = () => {
-  const [mounted, setMounted] = useState(false);
+const Movie3020 = ({getTheCurrentPage, mounted}) => {
 
-  useEffect(() => {
-    setMounted(true);
+ useEffect(() => {
+    getTheCurrentPage();
   }, []);
 
   const images3D = [

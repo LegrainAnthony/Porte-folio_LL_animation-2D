@@ -1,8 +1,14 @@
 import CjmsfvContainer from "./Cjmsfv.style";
 import { PagesContainer } from "./Cjmsfv.style";
 import Navigation from "../../components/Navigation/Navigation";
+import { useEffect } from "react";
 
-const Cjmsfv = () => {
+const Cjmsfv = ({getTheCurrentPage, mounted}) => {
+
+  useEffect(() => {
+    getTheCurrentPage();
+  }, []);
+
   return (
     <CjmsfvContainer>
         <img
@@ -11,7 +17,7 @@ const Cjmsfv = () => {
             alt="aaaaaaaa"
         />
       <PagesContainer>
-        <Navigation />
+        <Navigation mounted={mounted} />
         <div className="animation__text__container">
           <h2 className="animation__text Boogaloo">Animation 2D</h2>
         </div>

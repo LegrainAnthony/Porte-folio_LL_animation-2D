@@ -9,15 +9,15 @@ export const NavigationContainer = styled.div`
   display: flex;
   align-items: center;
   color: #8f4646;
-  color: ${(props) => (props.props.setColor === true ? "#fff" : "#8f4646")};
+  color: ${(props) => (props.props.mounted === true ? "#fff" : "#8f4646")};
   background-color: #ffebeb;
   background-color: ${(props) =>
-  props.props.setColor === true ? "#32335e" : "#ffebeb"};
+  props.props.mounted === true ? "#32335e" : "#ffebeb"};
   transition: background-color 0.3s ease-in-out;
   position: sticky;
   top: 0;
   border-bottom: 1.5px solid #8f4646;
-  border-color: ${(props) => (props.props.setColor === true ? "#fff" : "#8f4646")};
+  border-color: ${(props) => (props.props.mounted === true ? "#fff" : "#8f4646")};
   z-index: 999;
 
 
@@ -38,7 +38,7 @@ export const NavigationContainer = styled.div`
 
     .text {
       font-size: 2em;
-      color: ${(props) => (props.props.setColor === true ? "#fff" : "#8f4646")};
+      color: ${(props) => (props.props.mounted === true ? "#fff" : "#8f4646")};
     }
   }
 
@@ -68,7 +68,7 @@ export const NavigationContainer = styled.div`
           text-decoration: none;
           color: #8f4646;
           color: ${(props) =>
-            props.props.setColor === true ? "#fff" : "#8f4646"};
+            props.props.mounted === true ? "#fff" : "#8f4646"};
           position: relative;
           font-size: 1.2em;
           font-weight: 700;
@@ -83,7 +83,7 @@ export const NavigationContainer = styled.div`
           height: 2px;
           background-color: #8f4646;
           background-color: ${(props) =>
-            props.props.setColor === true ? "#fff" : "#8f4646"};
+            props.props.mounted === true ? "#fff" : "#8f4646"};
           transition: 0.2s ease-in-out;
         }
 
@@ -189,10 +189,13 @@ export const NavigationContainer = styled.div`
         
     .burger__button {
       color: #8f4646;
-      color: ${(props) => (props.props.open === true ? "#fff" : "8f4646")};
+      color: ${(props) => (props.props.mounted === true ? props.props.open === true ? "#fde702" : "#fff" :  props.props.open === true ? "#fff" : "#8f4646")};
       display: block;
       z-index: 99;
       font-size: 2em;
+      transform: ${(props) => (props.props.open === true ? "rotate(90deg)" : "rotate(0deg)")};
+      transition: transform 0.2s ease-in-out;
+      
     }
     .name__container {
       flex-direction: column;
@@ -213,6 +216,7 @@ export const NavigationContainer = styled.div`
         width: ${(props) => (props.props.open === true ? " 70%" : "0")};
         transition: all 0.2s ease-in-out;
         background-color: #8f4646;
+        background-color: ${(props) => (props.props.mounted === true ? "#252649" : "#8f4646")};
         height: 100vh;
         position: absolute;
         top: 0;
@@ -230,13 +234,12 @@ export const NavigationContainer = styled.div`
           margin: 0.5em;
           margin-left: 22%;
 
-
           .navbar__link {
             color: #fff;
-          }
         }
       }
     }
+  }
   }
   @media screen and (max-width: 375px) {
 

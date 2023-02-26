@@ -2,14 +2,13 @@ import styled from 'styled-components';
 
 export const IllustrationContainer = styled.div`
   display: flex;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
-  justify-content: center;
   background-color: #ffe0e0;
 
 
   .Illustration__text__container {
-    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +24,6 @@ export const IllustrationContainer = styled.div`
   }
 
   .paragraph__container {
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,12 +46,10 @@ export const IllustrationContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
  
     .image {
       width: 300px;
       margin: 1em;
-      background-color: blue;
     }
 
     .image0 {
@@ -102,8 +98,37 @@ export const IllustrationContainer = styled.div`
       width: 295px;
     }
 
+  }
+  @media screen and (max-width: 1440px) {
 
-    
+    .images__container {
+
+      .image0 {
+        width: 400px;
+      }
+
+      .image9 {
+        width: 500px;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .images__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .image{
+        width: 90%;
+        margin: 1em;
+      }
+
+}
   }
   
   `;
@@ -112,9 +137,6 @@ export const PagesContainer = styled.div`
   width: 65%;
   background-color: #ffebeb;
   overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   
   @media screen and (max-width: 1520px) {
     width: 75%;

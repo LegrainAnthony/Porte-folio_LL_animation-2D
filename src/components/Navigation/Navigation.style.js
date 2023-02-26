@@ -19,7 +19,6 @@ export const NavigationContainer = styled.div`
   border-bottom: 1.5px solid #8f4646;
   border-color: ${(props) => (props.props.mounted === true ? "#fff" : "#8f4646")};
   z-index: 999;
-  background-color: #fff;
 
 
   .name__container {
@@ -264,6 +263,7 @@ export const NavigationContainer = styled.div`
         width: ${(props) => (props.props.open === true ? " 70%" : "0")};
         transition: all 0.2s ease-in-out;
         background-color: #8f4646;
+        background-color: ${(props) => (props.props.mounted === true ? "#252649" : "#8f4646")};
         height: 100vh;
         position: absolute;
         top: 0;
@@ -307,6 +307,7 @@ export const NavigationContainer = styled.div`
         width: ${(props) => (props.props.open === true ? " 70%" : "0")};
         transition: all 0.2s ease-in-out;
         background-color: #8f4646;
+        background-color: ${(props) => (props.props.mounted === true ? "#252649" : "#8f4646")};
         height: 100vh;
         position: absolute;
         top: 0;

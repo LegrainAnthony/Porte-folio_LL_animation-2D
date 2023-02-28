@@ -31,6 +31,7 @@ function App() {
       <Route path="Illustration" element={<Illustration getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
       <Route path="Contact" element={<Contact getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
       <Route path="Animation2D/MovieCJMSFV" element={<Cjmsfv getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+      <Route path="*" element={<Accueil getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
     </Routes>
   );
 }

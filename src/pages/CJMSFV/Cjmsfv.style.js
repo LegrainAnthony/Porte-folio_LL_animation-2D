@@ -107,6 +107,19 @@ const CjmsfvContainer = styled.div`
     width: 400px;
   }
 
+  .link_container {
+    .paragraph__link {
+      margin-top: -1.5em;
+      margin-bottom: 0.5em;
+    }
+    .link{
+      transition: 0.2s ease-out;
+    }
+    .link:hover {
+      transform: scale(1.1);
+    }
+  }
+
   @media screen and (max-width: 425px) {
     .video {
       width: 90%;

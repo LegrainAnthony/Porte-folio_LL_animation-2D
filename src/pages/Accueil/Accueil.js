@@ -45,7 +45,7 @@ function Acceuil({ getTheCurrentPage, mounted}) {
           <img className="pad pad-left" src="images/accueil/coussinetRight.png" alt="" />
         </div>
         <div className="image__container" >
-        <img className="image" src='images/accueil/louise.png' alt="aaaaaaaa" />
+          <img className="image" src='images/accueil/louise.png' alt="aaaaaaaa" />
         </div>
 
       </PagesContainer>

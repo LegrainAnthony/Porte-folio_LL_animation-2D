@@ -13,7 +13,7 @@ export const NavigationContainer = styled.div`
   background-color: #ffebeb;
   background-color: ${(props) =>
   props.props.mounted === true ? "#32335e" : "#ffebeb"};
-  transition: background-color 0.3s ease-in-out;
+  transition: ${(props) => (props.props.mounted === true ? "all 0.3s ease-in-out" : "all 0s ease-in-out")} ;
   position: sticky;
   top: 0;
   border-bottom: 1.5px solid #8f4646;
@@ -305,7 +305,6 @@ export const NavigationContainer = styled.div`
 .navbar__container {
         width: 0;
         width: ${(props) => (props.props.open === true ? " 70%" : "0")};
-        transition: all 0.2s ease-in-out;
         background-color: #8f4646;
         background-color: ${(props) => (props.props.mounted === true ? "#252649" : "#8f4646")};
         height: 100vh;
@@ -317,7 +316,6 @@ export const NavigationContainer = styled.div`
       .navbar__list {
         display: none;
         display: ${(props) => (props.props.open === true ? "flex" : "none")};
-        transition: all 0.2s ease-in-out;
         flex-direction: column;
         align-items: center;
         .navbar__item {

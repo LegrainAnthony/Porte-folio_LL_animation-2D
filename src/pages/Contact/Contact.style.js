@@ -111,7 +111,14 @@ export const ContactContainer = styled.div`
     }
   }
 
-  
+  @media screen and (max-width: 1650px) {
+
+    .imgLP2__container {
+        .imgLP2 {
+          width: 800px;
+        }
+    }
+}
 
 
 
@@ -130,9 +137,20 @@ export const ContactContainer = styled.div`
     .imgLP2__container {
     width: 80%;
     .imgLP2 {
-      width: 800px;
+      width: 750px;
     }
   }
+}
+
+  @media screen and (max-width: 1000px) {
+
+      .imgLP2__container {
+        width: 80%;
+          .imgLP2 {
+            width: 600px;
+          }
+      }
+
 
   }
   @media screen and (max-width: 768px) {
@@ -150,8 +168,13 @@ export const ContactContainer = styled.div`
       width: 400px;
     }
   }
-    
+    .main__container__link { 
+      .triple-link__container {
+      margin-top: 2.5em;
+      }
+    }
   }
+  
   @media screen and (max-width: 375px) {
 
     .imgLP2__container {
@@ -159,8 +182,56 @@ export const ContactContainer = styled.div`
       width: 350px;
     }
   }
+  .main__container__link { 
+      .triple-link__container {
+      margin-top: 3em;
+      }
+    }
     
   }
+
+  @media screen and (max-width: 700px) {
+    .imgLP2__container {
+      .imgLP2 {
+        width: 500px;
+      }
+    } 
+  }
+
+  @media screen and (max-width: 600px) {
+    .imgLP2__container {
+      .imgLP2 {
+        width: 500px;
+      }
+    } 
+  }
+  
+
+  @media screen and (max-width: 500px) {
+    .imgLP2__container {
+      .imgLP2 {
+        width: 360px;
+      }
+    } 
+  }
+
+
+  @media screen and (max-width: 450px) {
+    .imgLP2__container {
+      .imgLP2 {
+        width: 350px;
+      }
+    } 
+  }
+
+  @media screen and (max-width: 411px) {
+    .imgLP2__container {
+      .imgLP2 {
+        width: 330px;
+      }
+    } 
+  }
+
   @media screen and (max-width: 320px) {
 
     
@@ -180,12 +251,31 @@ export const ContactContainer = styled.div`
 
 
   }
+
+  @media screen and (max-height: 800px) {
+
+    
+    .imgLP2__container {
+      .imgLP2 {
+        display: none;
+      }
+    }
+
+    .main__container__link {
+        .email_container {
+        .email {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
 `;
 
 export const PagesContainer = styled.div`
   width: 65%;
   height: 100%;
   background-color: #ffebeb;
+  overflow-y: scroll;
 
   @media screen and (max-width: 1520px) {
     width: 75%;
@@ -194,7 +284,7 @@ export const PagesContainer = styled.div`
   @media screen and (max-width: 1366px) {
     width: 80%;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 780px) {
     width: 100%;
   }
   @media screen and (max-width: 411px) {

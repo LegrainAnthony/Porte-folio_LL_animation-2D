@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const AccueilContainer = styled.div`
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   background-color: #ffe0e0;
@@ -166,6 +167,7 @@ export const PagesContainer = styled.div`
   width: 65%;
   height: 100%;
   background-color: #ffebeb;
+  overflow-y: scroll;
 
   @media screen and (max-width: 1520px) {
     width: 75%;
@@ -174,7 +176,7 @@ export const PagesContainer = styled.div`
   @media screen and (max-width: 1366px) {
     width: 80%;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 780px) {
     width: 100%;
   }
   @media screen and (max-width: 411px) {

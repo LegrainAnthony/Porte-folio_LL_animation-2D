@@ -130,6 +130,9 @@ export const NavigationContainer = styled.div`
         }
       }
     }
+
+
+
     @media screen and (max-width: 1024px) {
       .name__container {
         .name {
@@ -149,7 +152,42 @@ export const NavigationContainer = styled.div`
         }
       }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
+      .name__container {
+        .name {
+          font-size: 1.5em;
+        }
+        .text {
+          font-size: 1.5em;
+        }
+      }
+      .navbar__container {
+        .navbar__list {
+          .navbar__item {
+            font-size: 1.5em
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .name__container {
+        .name {
+          font-size: 1.3em;
+        }
+        .text {
+          font-size: 1.3em;
+        }
+      }
+      .navbar__container {
+        .navbar__list {
+          .navbar__item {
+            font-size: 1.3em
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 780px) {
       .name__container {
         .name {
           font-size: 1.5em;
@@ -171,6 +209,7 @@ export const NavigationContainer = styled.div`
       }
     }
   }
+
 
   @media screen and (max-width: 720px) {
     

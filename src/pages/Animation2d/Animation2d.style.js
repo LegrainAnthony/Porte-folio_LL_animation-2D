@@ -210,7 +210,7 @@ export const PagesContainer = styled.div`
   @media screen and (max-width: 1366px) {
     width: 80%;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 780px) {
     width: 100%;
   }
   

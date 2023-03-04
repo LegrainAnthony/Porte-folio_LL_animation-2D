@@ -205,7 +205,7 @@ export const ContactContainer = styled.div`
       }
     } 
   }
-  
+
 
   @media screen and (max-width: 500px) {
     .imgLP2__container {
@@ -252,7 +252,7 @@ export const ContactContainer = styled.div`
 
   }
 
-  @media screen and (max-height: 800px) {
+  @media screen and (max-height: 500px) {
 
     
     .imgLP2__container {
@@ -309,5 +309,8 @@ export const PagesContainer = styled.div`
       }
 
     }
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
   }
   `;

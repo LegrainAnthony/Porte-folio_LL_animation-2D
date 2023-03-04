@@ -1,7 +1,7 @@
 import './App.css';
 import './font.css';
 import './reset.css';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import Accueil from './pages/Accueil/Accueil';
 import Animation2D from './pages/Animation2d/Animation2d';
@@ -24,17 +24,15 @@ function App() {
   }
 
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<Accueil getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-        <Route path="Animation2D" element={<Animation2D getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-        <Route path="Movie3020" element={<Movie3020 getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-        <Route path="Illustration" element={<Illustration getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-        <Route path="Contact" element={<Contact getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-        <Route path="Animation2D/MovieCJMSFV" element={<Cjmsfv getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-        <Route path="*" element={<Accueil getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-      </Routes>
-    </HashRouter>
+    <Routes>
+      <Route path="/" element={<Accueil getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+      <Route path="Animation2D" element={<Animation2D getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+      <Route path="Movie3020" element={<Movie3020 getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+      <Route path="Illustration" element={<Illustration getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+      <Route path="Contact" element={<Contact getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+      <Route path="Animation2D/MovieCJMSFV" element={<Cjmsfv getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+      <Route path="*" element={<Accueil getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+    </Routes>
   );
 }
 

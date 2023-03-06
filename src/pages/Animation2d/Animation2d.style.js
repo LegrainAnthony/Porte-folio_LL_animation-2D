@@ -214,13 +214,6 @@ export const PagesContainer = styled.div`
     width: 100%;
   }
   
-  @media screen and (max-width: 425px) {
-
-  }
-    
-  @media screen and (max-width: 375px) {
-    
-  }
   @media screen and (max-width: 320px) {
     
     .image__container {

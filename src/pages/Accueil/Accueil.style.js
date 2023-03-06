@@ -151,15 +151,6 @@ export const AccueilContainer = styled.div`
 
   }
 
-  @media screen and (max-width: 411px) {
-    
-  }
-  @media screen and (max-width: 375px) {
-    
-  }
-  @media screen and (max-width: 360px) {
-    
-  }
 
 `;
 
@@ -178,12 +169,6 @@ export const PagesContainer = styled.div`
   }
   @media screen and (max-width: 780px) {
     width: 100%;
-  }
-  @media screen and (max-width: 411px) {
-    
-  }
-  @media screen and (max-width: 375px) {
-    
   }
   @media screen and (max-width: 320px) {
     

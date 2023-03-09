@@ -37,6 +37,3 @@ function App() {
 }
 
 export default App;
-
-
-// linkedin - insta - artation - mail

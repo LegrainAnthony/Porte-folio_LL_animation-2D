@@ -119,16 +119,6 @@ export const AnimationContainer = styled.div`
     
   }
 
-  @media screen and (max-width: 1520px) {
-    
-  }
-
-  @media screen and (max-width: 1366px) {
-    
-  }
-  @media screen and (max-width: 768px) {
-   
-  }
   @media screen and (max-width: 425px) {
 
 .video {
@@ -163,9 +153,7 @@ export const AnimationContainer = styled.div`
   }
 }
 }
-  @media screen and (max-width: 375px) {
-    
-  }
+
   @media screen and (max-width: 320px) {
 
   .text__container {
@@ -202,10 +190,6 @@ export const PagesContainer = styled.div`
   height: 100%;
   background-color: #ffebeb;
   overflow-y: scroll;
-
-  @media screen and (max-width: 1520px) {
-    width: 75%;
-  }
 
   @media screen and (max-width: 1366px) {
     width: 80%;

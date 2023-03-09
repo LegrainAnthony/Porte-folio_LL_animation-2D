@@ -99,12 +99,7 @@ export const AccueilContainer = styled.div`
       cursor: pointer;
     }
   }
-
-  @media screen and (max-width: 1520px) {
-  }
-
-  @media screen and (max-width: 1024) {
-  }
+  
   @media screen and (max-width: 768px) {
 
     .title__container {

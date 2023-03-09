@@ -8,9 +8,7 @@ function Acceuil({ getTheCurrentPage, mounted}) {
   useEffect(() => {
     getTheCurrentPage();
   }, []);
-
-  console.log(mounted, "mounted");
-
+  
   return (
     <AccueilContainer>
       <PagesContainer>

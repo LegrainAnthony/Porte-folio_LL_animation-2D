@@ -1,6 +1,6 @@
 import Navigation from "../../components/Navigation/Navigation";
 import { MovieContainer, PagesContainer } from "./Movie3020.style";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./glitch.css";
 
 const Movie3020 = ({getTheCurrentPage, mounted}) => {

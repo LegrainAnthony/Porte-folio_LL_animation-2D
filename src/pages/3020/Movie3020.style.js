@@ -188,9 +188,6 @@ export const MovieContainer = styled.div`
     }
 
   }
-  @media screen and (max-width: 768px) {
-  
-  }
   
   @media screen and (max-width: 425px) {
 
@@ -265,10 +262,7 @@ export const MovieContainer = styled.div`
       }  
     }
   }
-    
-  @media screen and (max-width: 375px) {
-    
-  }
+
   @media screen and (max-width: 320px) {
     .image-title-movie__container {
       .image-title-movie {

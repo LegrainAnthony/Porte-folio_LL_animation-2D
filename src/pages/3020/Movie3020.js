@@ -150,29 +150,13 @@ const Movie3020 = ({getTheCurrentPage, mounted}) => {
 
             <div className="compilation__container">
               <p className="paragraph paragraph8 SpecialElite">
-                Voici une compilation de mes animations 2D en rough réalisés à
-                ce jour :
+                Voici une compilation de mes animations réalisé pendant cette année de production
               </p>
               <div className="video-compilation__container">
                 <video className="video" width="750" height="430" controls>
                   <source
                     className="source-video"
                     src="videos/Compilation_Anim_Rough.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
-            <div className="composition__container">
-              <p className="paragraph paragraph8 SpecialElite">
-                Et ici, une scène animé par Maud, que j'ai par la suite clean et
-                réalisé le compositing :
-              </p>
-              <div className="video-compositionn__container">
-                <video className="video" width="750" height="430" controls>
-                  <source
-                    className="source-video"
-                    src="videos/Composition1.mp4"
                     type="video/mp4"
                   />
                 </video>

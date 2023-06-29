@@ -12,6 +12,8 @@ import Cjmsfv from './pages/CJMSFV/Cjmsfv';
 
 function App() {
 
+  const [lock, setLock] = useState(true)
+
   const [mounted, setMounted] = useState(false);
 
   function getTheCurrentPage() {
@@ -23,17 +25,25 @@ function App() {
     }
   }
 
-  return (
-    <Routes>
-      <Route path="/" element={<Accueil getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-      <Route path="/Animation2D" element={<Animation2D getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-      <Route path="/Movie3020" element={<Movie3020 getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-      <Route path="/Illustration" element={<Illustration getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-      <Route path="/Contact" element={<Contact getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-      <Route path="/Animation2D/MovieCJMSFV" element={<Cjmsfv getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-      <Route path="*" element={<Accueil getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
-    </Routes>
-  );
-}
+  if(lock === true) {
+   let mdp = prompt(`Le site nécessite un mot de passe`)
+   if (mdp === 'demoreellouise') {
+      setLock(false)
+   }
+  } else {
+    return (
+      <Routes>
+        <Route path="/" element={<Accueil getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+        <Route path="/Animation2D" element={<Animation2D getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+        <Route path="/Movie3020" element={<Movie3020 getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+        <Route path="/Illustration" element={<Illustration getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+        <Route path="/Contact" element={<Contact getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+        <Route path="/Animation2D/MovieCJMSFV" element={<Cjmsfv getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+        <Route path="*" element={<Accueil getTheCurrentPage={getTheCurrentPage} mounted={mounted} />} />
+      </Routes>
+    );
+  }
+  }
+
 
 export default App;

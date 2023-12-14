@@ -1,24 +1,52 @@
 import styled from "styled-components";
 
- 
-
 export const NavigationContainer = styled.div`
+@import url('../../font.css');
+
+
   width: 100%;
-  height: 7rem;
-  padding-top: 1em;
+  height: 5rem;
   display: flex;
   align-items: center;
-  color: #8f4646;
-  color: ${(props) => (props.props.mounted === true ? "#fff" : "#8f4646")};
-  background-color: #ffebeb;
-  background-color: ${(props) =>
-  props.props.mounted === true ? "#32335e" : "#ffebeb"};
-  transition: ${(props) => (props.props.mounted === true ? "all 0.3s ease-in-out" : "all 0s ease-in-out")} ;
+  /* color: #8f4646;
+  color: ${(props) => (props.props.is3020 === true ? "#fff" : "#8f4646")}; */
+  /* color: #89354A; */
+  /* color: blue; */
+  background-color: #ffd9d8;
+  background-color: ${(props) => (props.props.is3020 === true ? "#32335e" : "#ffd9d8")};
+  transition: ${(props) => (props.props.is3020 === true ? "all 0.3s ease-in-out" : "all 0s ease-in-out")} ;
   position: sticky;
   top: 0;
-  border-bottom: 1.5px solid #8f4646;
-  border-color: ${(props) => (props.props.mounted === true ? "#fff" : "#8f4646")};
+  /* border-bottom: 1.5px solid #8f4646;
+  border-color: ${(props) => (props.props.is3020 === true ? "#fff" : "#8f4646")}; */
   z-index: 999;
+
+  .logo__container {
+    width: 15rem;
+    height: 100%;
+    color: #89354A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #fff; */
+    
+    .logo {
+      width: 3rem;
+    }
+  }
+
+
+  .sub--logo__container {
+    width: 15rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sub--logo {
+      width: 2.75rem;
+    }
+  }
 
 
   .name__container {
@@ -34,11 +62,15 @@ export const NavigationContainer = styled.div`
     .name {
       font-size: 2em;
       margin-bottom: -1em;
+      font-family: 'Carena';
     }
 
     .text {
       font-size: 2em;
-      color: ${(props) => (props.props.mounted === true ? "#fff" : "#8f4646")};
+      color: ${(props) => (props.props.is3020 === true ? "#fff" : "#8f4646")};
+      font-family: 'PPWoodland';
+      
+
     }
   }
 
@@ -51,24 +83,26 @@ export const NavigationContainer = styled.div`
 
     .navbar__list {
       display: flex;
-      justify-content: space-evenly;
-      margin-left: -5em;
-      width: 100%;
+      /* justify-content: space-evenly; */
+      /* margin-left: -5em; */
+      justify-content: flex-end;
 
+      width: 100%;
       list-style: none;
       color: black;
 
       .navbar__item {
-        margin-left: 0.5rem;
-        font-size: 2em;
+        margin: 0 3.5rem ;
+        font-size: 1.2rem;
         transition: transform 0.3s ease-in-out;
+        font-family: 'PPWoodland';
+        color: #89354A;
 
         .navbar__link {
+          color: #89354A;
           list-style: none;
           text-decoration: none;
-          color: #8f4646;
-          color: ${(props) =>
-            props.props.mounted === true ? "#fff" : "#8f4646"};
+          color: ${(props) => (props.props.is3020 === true ? "#fff" : "#89354A")};
           position: relative;
           font-size: 1.2em;
           font-weight: 700;
@@ -82,8 +116,7 @@ export const NavigationContainer = styled.div`
           width: 0%;
           height: 2px;
           background-color: #8f4646;
-          background-color: ${(props) =>
-            props.props.mounted === true ? "#fff" : "#8f4646"};
+          background-color: ${(props) => (props.props.is3020 === true ? "#fff" : "#8f4646")};
           transition: 0.2s ease-in-out;
         }
 
@@ -93,6 +126,7 @@ export const NavigationContainer = styled.div`
       }
     }
   }
+
 
   .burger__button {
     display: none;
@@ -228,7 +262,8 @@ export const NavigationContainer = styled.div`
         
     .burger__button {
       color: #8f4646;
-      color: ${(props) => (props.props.mounted === true ? props.props.open === true ? "#fde702" : "#fff" :  props.props.open === true ? "#fff" : "#8f4646")};
+      color: ${(props) =>
+			props.props.is3020 === true ? (props.props.open === true ? "#fde702" : "#fff") : props.props.open === true ? "#fff" : "#8f4646"};
       display: block;
       z-index: 99;
       font-size: 2em;
@@ -255,7 +290,7 @@ export const NavigationContainer = styled.div`
         width: ${(props) => (props.props.open === true ? " 70%" : "0")};
         transition: all 0.2s ease-in-out;
         background-color: #8f4646;
-        background-color: ${(props) => (props.props.mounted === true ? "#252649" : "#8f4646")};
+        background-color: ${(props) => (props.props.is3020 === true ? "#252649" : "#8f4646")};
         height: 100vh;
         position: absolute;
         top: 0;
@@ -302,7 +337,7 @@ export const NavigationContainer = styled.div`
         width: ${(props) => (props.props.open === true ? " 70%" : "0")};
         transition: all 0.2s ease-in-out;
         background-color: #8f4646;
-        background-color: ${(props) => (props.props.mounted === true ? "#252649" : "#8f4646")};
+        background-color: ${(props) => (props.props.is3020 === true ? "#252649" : "#8f4646")};
         height: 100vh;
         position: absolute;
         top: 0;
@@ -345,7 +380,7 @@ export const NavigationContainer = styled.div`
         width: 0;
         width: ${(props) => (props.props.open === true ? " 70%" : "0")};
         background-color: #8f4646;
-        background-color: ${(props) => (props.props.mounted === true ? "#252649" : "#8f4646")};
+        background-color: ${(props) => (props.props.is3020 === true ? "#252649" : "#8f4646")};
         height: 100vh;
         position: absolute;
         top: 0;

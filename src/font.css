@@ -8,6 +8,16 @@ font-family: 'Sanchez', serif;
 font-family: 'Special Elite', cursive;
 font-family: 'Titan One', cursive; */
 
+@font-face {
+    font-family: 'Carena';
+    src: url('../public/fonts/Carena-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PPWoodland';
+    src: url('../public/fonts/PPWoodland-Ultralight.woff') format('woff');
+}
+
 .AmaticSC {
     font-family: 'Amatic SC', cursive;
 }

@@ -2,6 +2,7 @@ import { NavigationContainer, NavbarItem, NavbarLink, NavBarContainer } from "./
 import { useState } from "react";
 import { MenuOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import DooblePawn from "../icons/DooblePawn";
 
 const Navigation = ({ is3020 }) => {
 	const [open, setOpen] = useState(false);
@@ -54,11 +55,7 @@ const Navigation = ({ is3020 }) => {
 						</NavbarItem>
 					</ul>
 				</NavBarContainer>
-				<div className="sub--logo__container">
-					<div className="sub-logo">
-						<img className="sub--logo" src={!is3020 ? "SVG/dooble_pawn.svg" : "SVG/dooble_pawn-yellow.svg"} />
-					</div>
-				</div>
+				<DooblePawn is3020={is3020} />
 				<div className="burger__button" onClick={handleClick}>
 					<MenuOutlined />
 				</div>

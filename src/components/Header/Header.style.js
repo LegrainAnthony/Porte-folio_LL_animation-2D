@@ -13,19 +13,21 @@ export const NavigationContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem ;
-  z-index: 1000;
+  z-index: 30;
+
 
   .sub--logo__container {display: none; }
   .logo__container { width: 3rem}
   .exitDiv {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 100vh;
     top: 0;
-    right: 0;
+    left: 0;
+    z-index: 30;
   }
   .burger__button {
-    z-index: 10;
+    z-index: 31;
     transform: ${(props) => (props.open ? "rotate(90deg)" : "rotate(0deg)")};
     transition: transform 0.2s ease-in-out;
     color: ${(props) => (!props.is3020 ? (props.open ? "white" : "#89354a") : "#fde702")};
@@ -38,10 +40,6 @@ export const NavigationContainer = styled.div`
 
   @media only screen and (min-width: 1440px) {
     padding: 0.5rem 1.5rem;
-    .sub--logo__container {
-      display: block;
-      width: 2.5rem;
-    }
   };
 
 `;
@@ -53,7 +51,7 @@ export const NavBarContainer = styled.div`
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 20;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
     background-color: ${(props) => (!props.is3020 ? "#89354A" : "#110b2f")};
@@ -82,6 +80,7 @@ export const NavBarContainer = styled.div`
 
       @media (min-width: 1024px) {
        height: 1.5rem;
+       z-index: 2;
        }
 
       @media only screen and (min-width: 1440px) {

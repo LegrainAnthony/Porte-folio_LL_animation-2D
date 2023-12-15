@@ -38,7 +38,7 @@ export const HomeContainer = styled.div`
           padding-top: 3vw;
           height: 100%;
           width: 100%;
-          z-index: 11;
+          z-index: 15;
           color: #FFEDED;
         
         }
@@ -84,9 +84,13 @@ export const HomeContainer = styled.div`
           font-family: 'PPWoodland';
           font-weight: bold;
           cursor: pointer;
+          transition: all 0.2s ease-in-out;
+
           .text__button {
             font-size: 4vw;
           }
+
+
 
 
 
@@ -102,6 +106,14 @@ export const HomeContainer = styled.div`
 
             .text__button {
             font-size: 2vw;
+          }
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            color: #fde702;
+             border-color: #fde702;
+             transform: scale(1.1);
           }
         }
       }

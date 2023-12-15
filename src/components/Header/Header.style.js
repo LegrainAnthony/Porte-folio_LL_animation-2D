@@ -6,13 +6,14 @@ export const NavigationContainer = styled.div`
 @import url('../../font.css');
 
   background-color: ${(props) => (!props.is3020 ? "#ffd9d8" : "rgb(37, 38, 73)")};
-  position: fixed;
+  position: sticky;
   width: 100%;
-  top: 0;
+  top: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem ;
+  z-index: 1000;
 
   .sub--logo__container {display: none; }
   .logo__container { width: 3rem}
@@ -48,7 +49,7 @@ export const NavigationContainer = styled.div`
 export const NavBarContainer = styled.div`
     /* display: ${(props) => (props.open ? "flex" : "none")}; */
     width: ${(props) => (props.open ? "50%" : "0%")} ;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -64,7 +65,7 @@ export const NavBarContainer = styled.div`
 
     @media only screen and (min-width: 768px) {
      position: relative;
-     height: 1rem;
+  
      width: 100%;
      transition: none;
      background-color: transparent;
@@ -126,6 +127,7 @@ export const NavbarLink = styled(Link)`
   color: #fff;
   /* margin: 0;
   padding: 0; */
+  font-size: 4vw;
 
   .image-3020 {
     width: 3rem;
@@ -133,9 +135,10 @@ export const NavbarLink = styled(Link)`
 
   @media (min-width: 768px) {
     /* Styles pour les écrans plus larges */
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     text-align: center;
     color: ${(props) => (!props.is3020 ? "#89354A" : "#fff")};
+    font-size: 2vw;
     
    
       /* margin-top: 0.1rem; */

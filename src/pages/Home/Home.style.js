@@ -1,37 +1,208 @@
 import styled from "styled-components";
+import CursorYellowSVG from "../../assets/cursor-yellow.svg";
+import CursorSVG from "../../assets/cursor.svg";
 
 export const HomeContainer = styled.div`
   @import url('../../font.css');
   
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: #ffd9d8;
   position: relative;
-  
-  display: none;
-
-  .vague__container {
-    display: none;
-    .vague {
-     
-    }
-  }
+  overflow: hidden;
 
 
-  .pawn__container {
-     display: none;
+  .video__container {
+        position: relative;
+        cursor: url(${CursorYellowSVG}), auto;
+        
+
+        .mask {
+          background-color: rgba(255, 224, 224, 0.250);
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          z-index: 10;
+        }
+        .infos__container {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 6vw;
+          padding-top: 3vw;
+          height: 100%;
+          width: 100%;
+          z-index: 11;
+          color: #FFEDED;
+        
+        }
+        .video {
+          width: 100%;
+        }
+
+        .title-sub__container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+
+          .info__title {
+            font-size: 8vw;
+            margin-bottom: 2vw;
+            font-family: 'Carena';
+          }
+          .info__sub-title {
+            font-size: 6vw;
+            font-family: 'PPWoodland';
+          }
+
+          @media only screen and (min-width: 1440px){
+            padding-top: 5vw;
+            .info__title {
+            font-size: 5vw;
+            margin-bottom: 2vw;
+            font-family: 'Carena';
+          }
+          .info__sub-title {
+            font-size: 3vw;
+            font-family: 'PPWoodland';
+          }
+          }
+        }
+
+        .info__button {
+          border: 2px solid #FFEDED ;
+          /* padding: 0.45rem 2.4rem; */
+          padding: 0.3vw 2vw;
+          font-family: 'PPWoodland';
+          font-weight: bold;
+          cursor: pointer;
+          .text__button {
+            font-size: 4vw;
+          }
+
+
+
+          @media only screen and (min-width: 768px) {
+            padding: 0.3vw 2vw;
+
+            .text__button {
+            font-size: 3vw;
+          }
+        }
+
+        @media only screen and (min-width: 1440px) {
+
+            .text__button {
+            font-size: 2vw;
+          }
+        }
+      }
+
+        .pawn__container {
+          width: 5vw;
+          
+          @media only screen and (min-width: 768px) {
+            width: 3vw;
+          }
 
         .reversed__pawn {
 
         }
       }
-
-  .video {
-    display: none;
   }
+  
+  /* display: none; */
+.page__container {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .vague__container {
+    /* display: none; */
+    height: 2rem;
+    width: 100vw;
+    display: flex;
+    align-items: end;
+    position: absolute;
+    top: -2rem;
+    z-index: 20;
+    cursor: url(${CursorSVG}), auto;
+  }
+
+  .title__container {
+    margin: 10vw 0;
+
+    .title {
+      font-family: 'Carena';
+      font-size: 10vw;
+      color: #89354a;
+    }
+
+  @media only screen and (min-width: 1200px) {
+    margin: 3vw 0;
+    .title {
+      font-size: 6vw;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    margin: 0vw 0;
+  }
+  }
+
+  .paragraph__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8vw;
+    text-align: center;
+    font-family: 'PPWoodland';
+    font-size: 6vw;
+    color: #89354a;
+
+    p {
+      margin-bottom: 8vw;
+    }
+
+    @media only screen and (min-width: 768px) {
+         p {
+          font-size: 4vw;
+         }
+    }
+
+    @media only screen and (min-width: 1200px) {
+         p {
+          font-size: 3vw;
+         }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      padding: 4vw 20vw 0 20vw;
+         p {
+          margin-bottom: 4vw;
+          font-size: 1.5vw;
+         }
+        
+    }
+
+  }
+}
+
+
+
+
+
+
 
   /* .video__container {
     position: relative;

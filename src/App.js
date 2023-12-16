@@ -11,19 +11,30 @@ import Contact from "./pages/Contact/Contact";
 import Cjmsfv from "./pages/CJMSFV/Cjmsfv";
 import Navigation from "./components/Header/Header";
 import { AppContainer } from "./App.style.js";
+import Footer from "./components/Footer/Footer.js";
 
 function App() {
 	const [lock, setLock] = useState(true);
 
-	const [is3032page, setIs3032page] = useState(false);
+	const [is3020Page, setIs3020page] = useState(false);
+	const [isHomePage, setIsHomePage] = useState(false);
+
+	console.log(is3020Page, isHomePage);
 
 	function getTheCurrentPage() {
 		let loc = window.location.pathname;
 		if (loc === "/Movie3020") {
-			setIs3032page(true);
+			setIsHomePage(false);
+			setIs3020page(true);
 			return;
 		}
-		setIs3032page(false);
+		if (loc === "/") {
+			setIsHomePage(true);
+			setIs3020page(false);
+			return;
+		}
+		setIs3020page(false);
+		setIsHomePage(false);
 	}
 
 	// if (lock === true) {
@@ -34,17 +45,18 @@ function App() {
 	// } else {
 	return (
 		<>
-			<AppContainer is3020={is3032page}>
-				<Navigation is3020={is3032page} />
+			<AppContainer is3020={is3020Page}>
+				<Navigation is3020={is3020Page} />
 				<Routes>
-					<Route path="/" element={<Home getTheCurrentPage={getTheCurrentPage} is3020={is3032page} />} />
-					<Route path="/Animation2D" element={<Animation2D getTheCurrentPage={getTheCurrentPage} is3020={is3032page} />} />
-					<Route path="/Movie3020" element={<Movie3020 getTheCurrentPage={getTheCurrentPage} is3020={is3032page} />} />
-					<Route path="/Illustration" element={<Illustration getTheCurrentPage={getTheCurrentPage} is3020={is3032page} />} />
-					<Route path="/Contact" element={<Contact getTheCurrentPage={getTheCurrentPage} is3020={is3032page} />} />
-					<Route path="/Animation2D/MovieCJMSFV" element={<Cjmsfv getTheCurrentPage={getTheCurrentPage} is3020={is3032page} />} />
-					<Route path="*" element={<Home getTheCurrentPage={getTheCurrentPage} is3020={is3032page} />} />
+					<Route path="/" element={<Home getTheCurrentPage={getTheCurrentPage} is3020={is3020Page} />} />
+					<Route path="/Animation2D" element={<Animation2D getTheCurrentPage={getTheCurrentPage} is3020={is3020Page} />} />
+					<Route path="/Movie3020" element={<Movie3020 getTheCurrentPage={getTheCurrentPage} is3020={is3020Page} />} />
+					<Route path="/Illustration" element={<Illustration getTheCurrentPage={getTheCurrentPage} is3020={is3020Page} />} />
+					<Route path="/Contact" element={<Contact getTheCurrentPage={getTheCurrentPage} is3020={is3020Page} />} />
+					<Route path="/Animation2D/MovieCJMSFV" element={<Cjmsfv getTheCurrentPage={getTheCurrentPage} is3020={is3020Page} />} />
+					<Route path="*" element={<Home getTheCurrentPage={getTheCurrentPage} is3020={is3020Page} />} />
 				</Routes>
+				<Footer is3020={is3020Page} isHome={isHomePage} />
 			</AppContainer>
 		</>
 	);

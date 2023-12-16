@@ -111,8 +111,6 @@ export const HomeContainer = styled.div`
 
         @media (hover: hover) {
           &:hover {
-            color: #fde702;
-             border-color: #fde702;
              transform: scale(1.1);
           }
         }

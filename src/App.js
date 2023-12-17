@@ -46,7 +46,7 @@ function App() {
 	return (
 		<>
 			<AppContainer is3020={is3020Page}>
-				<Navigation is3020={is3020Page} />
+				<Navigation is3020={is3020Page} isHome={isHomePage} />
 				<Routes>
 					<Route path="/" element={<Home getTheCurrentPage={getTheCurrentPage} is3020={is3020Page} />} />
 					<Route path="/Animation2D" element={<Animation2D getTheCurrentPage={getTheCurrentPage} is3020={is3020Page} />} />

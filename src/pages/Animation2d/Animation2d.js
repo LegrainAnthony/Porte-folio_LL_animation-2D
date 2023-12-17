@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Navigation from "../../components/Header/Header";
-import { AnimationContainer, PagesContainer } from "./Animation2d.style";
+import { AnimationContainer, PageContainer } from "./Animation2d.style";
 import { useEffect } from "react";
+import PageTitle from "../../components/Title/PageTitle.js";
 
 const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 	useEffect(() => {
@@ -10,37 +11,35 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 
 	return (
 		<AnimationContainer>
-			<img className="louise-and-pepsi" src="images/home/louise-and-pepsi.png" alt="aaaaaaaa" />
-			<PagesContainer>
-				<div className="animation__text__container">
-					<h2 className="animation__text Boogaloo">Animation 2D</h2>
-				</div>
-				<div className="demo__text__container">
-					<h3 className="demo__text AmaticSC">Demo Reel 2023</h3>
-				</div>
-				<div className="video_container">
-					<video className="video" width="750" height="430" controls poster="videos/Book_Miniature.png">
-						<source className="source-video" src="videos/A5A_Levasseur_Louise_DemoReel_2023.mp4" type="video/mp4" />
-					</video>
-				</div>
+			<div className="wave__container">
+				<img className="wave" src={!is3020 ? "SVG/wave-2.svg" : "SVG/wave-black.svg"} />
+			</div>
+			<PageContainer>
+				<PageTitle>
+					<h1 className="title">Animation 2D</h1>
+				</PageTitle>
 				<div className="text__container">
-					<p className="paragraph AmaticSC">Retrouvez ici deux de mes projets :</p>
+					<p className="text">TEXT BIDON A RAJOUTER POUR TE FAIRE RECRUTER ET GAGNER DE LA MOULAGA</p>
 				</div>
-				<div className="link_container">
-					<div className="container-link-1">
-						<span className=" span1 TitanOne">1 .</span>
-						<Link to="MovieCJMSFV" className="link">
-							<img className="CJSFV-img span" src="images/CJMSFV.png" alt="" />
-						</Link>
-					</div>
-					<div className="container-link-2">
-						<span className="span2 TitanOne">2 .</span>
-						<Link to="../Movie3020" className="link">
-							<img className="movie3020-img span" src="images/movie3020.png" alt="" />
-						</Link>
+
+				<div className="demoreel__container">
+					<h2 className="demoreel__title">Ma demo reel 2023</h2>
+					<div className="video_container">
+						<video className="video" controls poster="videos/Book_Miniature.png">
+							<source className="source-video" src="videos/A5A_Levasseur_Louise_DemoReel_2023.mp4" type="video/mp4" />
+						</video>
 					</div>
 				</div>
-			</PagesContainer>
+				<div className="other-project__container">
+					<h3>Mes autres projet</h3>
+					<div className="projet-list__container">
+						<div className="projet__container">
+							<div className="projet__image"></div>
+							<div className="projet__description"></div>
+						</div>
+					</div>
+				</div>
+			</PageContainer>
 		</AnimationContainer>
 	);
 };

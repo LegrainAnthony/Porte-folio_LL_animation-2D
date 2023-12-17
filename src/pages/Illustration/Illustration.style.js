@@ -1,154 +1,113 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const IllustrationContainer = styled.div`
+
+@import url('../../font.css');
+
   display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #ffe0e0;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #FFEBEB;
 
+  .wave__container {
 
-  .Illustration__text__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3em;
+    display: ${(props) => (props.isHome ? "none" : "block")};
     width: 100%;
-
-    .Illustration__text {
-      font-size: 3.5em;
-      letter-spacing: 1px;
-      color: #8f4646;
-    }
+    margin-top: -1.6vw;
 
   }
 
-  .paragraph__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    width: 100%;
-    
-    .paragraph {
-      font-size: 1.3em;
-      width: 80%;
-      letter-spacing: 0.05em;
-      line-height: 1.1em;
-      text-align: center;
-      color: #8f4646;
+  .title {
+
+    margin-top: -5vw;
+
+    @media only screen and (min-width: 1920px) {
+        margin-top: 3vw;
     }
+  }
+
+
+  .paragraph__container {
+    margin-top: -5vw;
+    padding: 5vw;
+    font-family: 'PPWoodland';
+    text-align: center;
+    color: #89354A;
+
+    @media only screen and (min-width: 768px) {
+        margin-top: -10vw;
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin-top: -5vw;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        font-size: 1.5vw;
+    }
+
+    @media only screen and (min-width: 1920px) {
+        margin-top: 0;
+    }
+
   }
 
   .images__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
- 
-    .image {
-      width: 300px;
-      margin: 1em;
+    margin-bottom: 3rem;
+    .image__container {
+        width: 33.3vw;
+        height:33.3vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .image {
+            width: 33.3vw;
+            height:33.3vw;
+            object-fit: cover; 
+            position: absolute;
+            top: -16.65vw;
+            right: -16.65vw;
+        }
     }
 
-    .image0 {
-      width: 435px;
+    @media only screen and (min-width: 1440px) {
+        padding-left: 3vw;
+        .image__container {
+            width: 30vw;
+            height:30vw;
+            margin: 0.5vw;
+        }
+
+         .image {
+            width: 30vw;
+            height:30vw; 
+            top: -15vw;
+            right: -15vw;
+        }
     }
 
-    .image1 {
-      width: 275px;
-      margin-left: 2.5em;
+    @media only screen and (min-width: 1920px) {
+        padding-left: 10vw;
+        .image__container {
+            width: 25vw;
+            height:25vw;
+            margin: 0.5vw;
+        }
+
+         .image {
+            width: 25vw;
+            height:25vw; 
+            top: -12.5vw;
+            right: -12.5vw;
+        }
     }
 
-    .image2 {
-      width: 310px;
-    }
-
-    .image4 {
-      width: 322px;
-    }
-
-    .image9 {
-      width: 600px;
-    }
-
-    .image10 {
-      width: 310px;
-      margin-left: 1.5em;
-    }
-
-    .image11 {
-      width: 280px;
-    }
-
-    .image12 {
-      width: 290px;
-    }
-
-    .image13 {
-      width: 600px;
-    }
-
-    .image14 {
-      width: 238px;
-    }
-
-    .image15 {
-      width: 295px;
-    }
-
-  }
-  @media screen and (max-width: 1440px) {
-
-    .images__container {
-
-      .image0 {
-        width: 400px;
-      }
-
-      .image9 {
-        width: 500px;
-      }
-
-    }
-
-  }
-
-  @media screen and (max-width: 768px) {
-    .images__container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
-      .image{
-        width: 90%;
-        margin: 1em;
-      }
-
-}
-  }
-  
-  `;
-
-export const PagesContainer = styled.div`
-  width: 65%;
-  background-color: #ffebeb;
-  overflow-y: scroll;
-  
-  @media screen and (max-width: 1520px) {
-    width: 75%;
-  }
-  
-  @media screen and (max-width: 1366px) {
-    width: 80%;
-  }
-  @media screen and (max-width: 780px) {
-    width: 100%;
-  }
-  ::-webkit-scrollbar {
-    width: 0px;
-  }
-  `;
+ }
+`;

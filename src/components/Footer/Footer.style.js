@@ -13,6 +13,7 @@ export const FooterContainer = styled.div`
     justify-content: space-between;
     padding: 0.5vw 2vw;
     font-family: 'Carena';
+    z-index: 30;
 
     .sub--logo {
         width: 2.5rem;

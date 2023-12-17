@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navigation from "../../components/Header/Header";
 import { HomeContainer, PagesContainer } from "./Home.style";
 import { useEffect, useState } from "react";
+import PageTitle from "../../components/Title/PageTitle";
 
 function Home({ getTheCurrentPage, is3020 }) {
 	useEffect(() => {
@@ -32,9 +33,9 @@ function Home({ getTheCurrentPage, is3020 }) {
 				<div className="vague__container">
 					<img className="vague" src="SVG/vague_1.svg" />
 				</div>
-				<div className="title__container">
+				<PageTitle>
 					<h2 className="title">Bienvenue !</h2>
-				</div>
+				</PageTitle>
 				<div className="paragraph__container">
 					<p className="paragraph1">
 						Je m'appelle Louise Levasseur, et je suis passionnée par les dessins animés et le dessin depuis l'enfance. Au fil des années,

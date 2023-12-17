@@ -4,7 +4,7 @@ import { MenuOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import DooblePawn from "../icons/DooblePawn";
 
-const Navigation = ({ is3020 }) => {
+const Navigation = ({ is3020, isHome }) => {
 	const [open, setOpen] = useState(false);
 	const handleClick = () => {
 		setOpen(!open);
@@ -19,7 +19,7 @@ const Navigation = ({ is3020 }) => {
 
 	return (
 		<>
-			<NavigationContainer is3020={is3020} open={open}>
+			<NavigationContainer isHome={isHome} is3020={is3020} open={open}>
 				{/* mask */}
 				<div className="logo__container">
 					{open && <div className="exitDiv" onClick={handleClick}></div>}
@@ -44,12 +44,12 @@ const Navigation = ({ is3020 }) => {
 							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>
-							<NavbarLink to="/Animation2D" onClick={closeBurgerCurrentPage} is3020={is3020}>
+							<NavbarLink to="/Illustration" onClick={closeBurgerCurrentPage} is3020={is3020}>
 								ILLUSTRATION
 							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>
-							<NavbarLink to="/Animation2D" onClick={closeBurgerCurrentPage} is3020={is3020}>
+							<NavbarLink to="/Contact" onClick={closeBurgerCurrentPage} is3020={is3020}>
 								CONTACT
 							</NavbarLink>
 						</NavbarItem>

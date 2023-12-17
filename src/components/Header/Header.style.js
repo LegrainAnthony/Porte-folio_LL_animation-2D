@@ -32,6 +32,10 @@ export const NavigationContainer = styled.div`
     transition: transform 0.2s ease-in-out;
     color: ${(props) => (!props.is3020 ? (props.open ? "white" : "#89354a") : "#fde702")};
   }
+
+
+
+
   @media only screen and (min-width: 768px) {
     .burger__button {
       display: none;

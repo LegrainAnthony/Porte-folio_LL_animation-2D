@@ -1,9 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 /build
-/public/videos/*
-/public/images/*
-/public/SVG/*
+public/images/
+public/videos/
+public/SVG/
+
 
 
 # dependencies

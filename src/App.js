@@ -45,6 +45,7 @@ function App() {
 	// } else {
 	return (
 		<>
+			<link rel="stylesheet" href="https://video-react.github.io/assets/video-react.css" />
 			<AppContainer is3020={is3020Page}>
 				<Navigation is3020={is3020Page} isHome={isHomePage} />
 				<Routes>

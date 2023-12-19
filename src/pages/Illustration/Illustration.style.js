@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const IllustrationContainer = styled.div`
 
 @import url('../../font.css');
+@import '~video-react/styles/scss/video-react';
 
   display: flex;
   align-items: center;
@@ -78,35 +79,21 @@ export const IllustrationContainer = styled.div`
     }
 
     @media only screen and (min-width: 1440px) {
-        padding-left: 3vw;
+        padding-left: 25vw;
+        padding-right: 25vw;
         .image__container {
-            width: 30vw;
-            height:30vw;
+            width: 15vw;
+            height:15vw;
             margin: 0.5vw;
-        }
+ 
 
          .image {
-            width: 30vw;
-            height:30vw; 
-            top: -15vw;
-            right: -15vw;
+            width: 15vw;
+            height:15vw;
+            top: -7.65vw;
+            right: -7.65vw;;
         }
     }
-
-    @media only screen and (min-width: 1920px) {
-        padding-left: 10vw;
-        .image__container {
-            width: 25vw;
-            height:25vw;
-            margin: 0.5vw;
-        }
-
-         .image {
-            width: 25vw;
-            height:25vw; 
-            top: -12.5vw;
-            right: -12.5vw;
-        }
     }
 
  }

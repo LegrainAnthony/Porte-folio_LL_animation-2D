@@ -117,11 +117,20 @@ export const ProjectContainer = styled.div`
     /* flex-direction: ${(props) => (props.reverse ? "column-reverse" : "column")}; */
     flex-direction: column;
 
-    .projet__description {
+    .projet__pre-description {
         /* max-width: 70%; */
         /* text-align: ${(props) => (props.reverse ? "end" : "start")}; */
         padding: 5vw;
         background-color: #ffd9d8;
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 768px) {
+     flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
+     .projet__pre-description { 
+        background-color: #fff;
+        min-height: 100%;
+     }
     }
 `;
 
@@ -129,7 +138,28 @@ export const ProjectImage = styled.div`
     width: 100%;
 
 
+
     img {
         width: 100%;
     }
+
+    @media only screen and (min-width: 768px) {
+        background-color: red;  
+        max-width: 50%;
+        max-height: 50%;
+        .img {
+        width: 50%;
+    }
+}
+`;
+
+export const DescriptionContainer = styled.div`
+  transition: all 0.5s ease;
+  background-color: #ffd9d8;
+  height: ${(props) => (!props.openDescribe ? "0rem" : "20rem")} ;
+  p {
+    padding-top: 2rem;
+  }
+  overflow: hidden;
+  width: 100%;
 `;

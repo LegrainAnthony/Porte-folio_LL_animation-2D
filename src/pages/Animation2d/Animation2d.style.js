@@ -1,6 +1,7 @@
 import styled from "styled-components";
-
+import { MdOutlineArrowDropDown } from "react-icons/md";
 export const AnimationContainer = styled.div`
+
 
 @import url('../../font.css');
 
@@ -74,7 +75,7 @@ export const OtherProjectContainer = styled.div`
 
     h2 {
 
-        padding: 6vw 0;
+        padding: 10vw 0;
         font-size: 6vw;
         font-family: 'Carena';
         color: #89354A ;
@@ -89,6 +90,7 @@ export const ProjectListContainer = styled.div`
 export const TitleMovie = styled.h3`
     margin: 0 5vw 5vw 5vw;
     font-family: 'PPWoodland';
+    font-weight: 700;
     position: relative;
     text-align: ${(props) => (props.reverse ? "end" : "start")};
     color: #89354A;
@@ -111,10 +113,9 @@ export const TitleMovie = styled.h3`
 
 export const ProjectContainer = styled.div`
     width: 100%;
-    margin-bottom: 10vw;
+    margin-bottom: 20vw;
     display: flex;
     align-items: center;
-    /* flex-direction: ${(props) => (props.reverse ? "column-reverse" : "column")}; */
     flex-direction: column;
 
     .projet__pre-description {
@@ -123,6 +124,34 @@ export const ProjectContainer = styled.div`
         padding: 5vw;
         background-color: #ffd9d8;
         width: 100%;
+        color: #89354A;
+        font-family: 'PPWoodland';
+        font-size: 4.5vw;
+
+        .synopsis {
+            font-family: 'Carena';
+            margin-bottom: 4vw;
+            font-size: 4vw;
+            font-weight: 700;
+        }
+
+        .see-more__container {
+            display: flex;
+            align-items: center;
+            margin-top: 5vw;
+            .see-more__button {
+            font-family: 'Carena';
+            font-size: 3vw;
+            font-weight: 700;
+        }
+            .arrow {
+                transition: all 0.3s ease;
+                transform: ${(props) => (!props.openDescribe ? "rotate(0deg)" : "rotate(180deg)")};
+                padding: 0;
+                margin-bottom: 1vw;
+                margin-left: 2vw;
+            }
+        }
     }
 
     @media only screen and (min-width: 768px) {
@@ -130,8 +159,46 @@ export const ProjectContainer = styled.div`
      .projet__pre-description { 
         background-color: #fff;
         min-height: 100%;
+
      }
     }
+`;
+
+export const PreDescriptionContainer = styled.div`
+        padding: 5vw;
+        background-color: #ffd9d8;
+        width: 100%;
+        color: #89354A;
+        font-family: 'PPWoodland';
+        font-size: 4.5vw;
+`;
+
+export const SeeMoreContainer = styled.div`      
+        display: flex;
+        align-items: center;
+        margin-top: 5vw;
+        max-width: 25%;
+        justify-content: space-between;
+`;
+
+export const SeeMoreButton = styled.div`
+        font-family: 'Carena';
+        font-size: 3vw;
+        font-weight: 700;
+`;
+
+export const SeeMoreArrow = styled(MdOutlineArrowDropDown)`
+        transition: all 0.3s ease;
+        transform: ${(props) => (!props.openDescribe ? "rotate(0deg)" : "rotate(180deg)")};
+        margin-bottom: 1vw;
+        margin-left: 2vw;
+`;
+
+export const Synopsis = styled.p`
+        font-family: 'Carena';
+        margin-bottom: 4vw;
+        font-size: 4vw;
+        font-weight: 700;
 `;
 
 export const ProjectImage = styled.div`
@@ -154,12 +221,21 @@ export const ProjectImage = styled.div`
 `;
 
 export const DescriptionContainer = styled.div`
-  transition: all 0.5s ease;
-  background-color: #ffd9d8;
-  height: ${(props) => (!props.openDescribe ? "0rem" : "20rem")} ;
-  p {
-    padding-top: 2rem;
-  }
-  overflow: hidden;
-  width: 100%;
+    padding: 0 5vw;
+    color: #89354A;
+    font-size: 4.5vw;
+    transition: all 0.5s ease;
+    background-color: #ffd9d8;
+    height: ${(props) => (!props.openDescribe ? "0vw" : "40vw")};
+    font-family: 'PPWoodland';
+    overflow: hidden;
+    width: 100%;
+    p:first-child{
+        padding-bottom: 1rem;
+    }
+
+    .see3020 {
+        padding-top: 2rem;
+    }
+
 `;

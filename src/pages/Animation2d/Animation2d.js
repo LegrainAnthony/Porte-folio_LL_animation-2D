@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Navigation from "../../components/Header/Header";
+
+import { MdOutlineArrowDropDown } from "react-icons/md";
 import { Player } from "video-react";
 import {
 	AnimationContainer,
@@ -9,7 +11,12 @@ import {
 	ProjectListContainer,
 	ProjectContainer,
 	TitleMovie,
-	DescriptionContainer
+	DescriptionContainer,
+	PreDescriptionContainer,
+	SeeMoreContainer,
+	SeeMoreButton,
+	Synopsis,
+	SeeMoreArrow
 } from "./Animation2d.style";
 import { useEffect, useState } from "react";
 import PageTitle from "../../components/Title/PageTitle.js";
@@ -62,101 +69,88 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 				<OtherProjectContainer>
 					<h2>Mes autres projet</h2>
 					<ProjectListContainer>
-						<TitleMovie reverse={true}>Titre du film</TitleMovie>
+						<TitleMovie reverse={true}>3020</TitleMovie>
 						<ProjectContainer reverse={true}>
 							<ProjectImage>
-								<Player poster="images/home/screen_projet.png">
+								<Player poster="images/miniatures/miniature_3020.png">
 									<source src="videos/3020_H264.mp4" />
 								</Player>
 							</ProjectImage>
-							<div className="projet__pre-description">
-								<p>
-									Text pour un projet que tu as réalisé bb Text pour un projet que tu as réalisé bb projet que tu as réalisé bb Text
-									pour un projet que tu as réalisé bb
-								</p>
+							<PreDescriptionContainer>
+								<Synopsis>Synopsis :</Synopsis>
+								<p>Une adolescente témoin d'une scène de harcèlement se retrouve plongée dans ses pensées et angoisses.</p>
 
-								<div
+								<SeeMoreContainer
 									onClick={() => {
 										openFilm("film");
 									}}
 								>
-									Description
-								</div>
-								<DescriptionContainer openDescribe={openDescription.film}>
-									<p>TEST</p>
-									<p>TESTTTT</p>
-									<p>tesststststts</p>
-								</DescriptionContainer>
-							</div>
+									<SeeMoreButton>Voir {!openDescription.film ? "plus..." : "moins"}</SeeMoreButton>
+									<SeeMoreArrow openDescribe={openDescription.film}></SeeMoreArrow>
+								</SeeMoreContainer>
+							</PreDescriptionContainer>
+							<DescriptionContainer openDescribe={openDescription.film}>
+								<p>Mon court métrage de fin d'étude réalisé par groupe de 3 sur 2 ans.</p>
+								<p className="see3020">Pour plus d'information, voir page 3020.</p>
+							</DescriptionContainer>
 						</ProjectContainer>
-						<TitleMovie>Titre du film</TitleMovie>
+						<TitleMovie reverse={false}>PEDILUVE</TitleMovie>
 						<ProjectContainer reverse={false}>
 							<ProjectImage>
-								<Player>
-									<source src="videos/A5A_Levasseur_Louise_DemoReel_2023.mp4" />
+								<Player poster="images/miniatures/miniature_pediluve.png">
+									<source src="videos/3020_H264.mp4" />
 								</Player>
 							</ProjectImage>
-							<div className="projet__pre-description">
-								<p>Text pour un projet que tu as réalisé bb</p>
-								<div
+							<PreDescriptionContainer>
+								<Synopsis>Synopsis :</Synopsis>
+								<p>Une femme seule à la piscine plongeant dans l'eau.</p>
+
+								<SeeMoreContainer
 									onClick={() => {
 										openFilm("film2");
 									}}
 								>
-									Description
-								</div>
-								<DescriptionContainer openDescribe={openDescription.film2}>
-									<p>TEST</p>
-									<p>TESTTTT</p>
-									<p>tesststststts</p>
-								</DescriptionContainer>
-							</div>
+									<SeeMoreButton>Voir {!openDescription.film2 ? "plus..." : "moins"}</SeeMoreButton>
+									<SeeMoreArrow openDescribe={openDescription.film2}></SeeMoreArrow>
+								</SeeMoreContainer>
+							</PreDescriptionContainer>
+							<DescriptionContainer openDescribe={openDescription.film2}>
+								<p>
+									Petit court métrage en collaboration avec les Master 1 lorsque j'étais en master 2 dans le cadre du cours de
+									spécialisation d'animation 2D sur 2 mois.
+								</p>
+								<p>
+									Pour ce projet j'ai travaillé sur de l'animation rough, clean (ToonBoom Harmony) et le Compositing (After effect).
+								</p>
+							</DescriptionContainer>
 						</ProjectContainer>
-						<TitleMovie reverse={true}>Titre du film</TitleMovie>
+						<TitleMovie reverse={true}>Comment je me suis fait virer</TitleMovie>
 						<ProjectContainer reverse={true}>
 							<ProjectImage>
-								<Player>
-									<source src="videos/A5A_Levasseur_Louise_DemoReel_2023.mp4" />
+								<Player poster="images/miniatures/miniature_cjmsfv.png">
+									<source src="videos/3020_H264.mp4" />
 								</Player>
 							</ProjectImage>
-							<div className="projet__pre-description">
-								<p>Text pour un projet que tu as réalisé bb</p>
-								<div
+							<PreDescriptionContainer>
+								<Synopsis>Synopsis :</Synopsis>
+								<p>Un vampire fait son entrée sur scène mais se retrouve réduit en cendres.</p>
+
+								<SeeMoreContainer
 									onClick={() => {
 										openFilm("film3");
 									}}
 								>
-									Description
-								</div>
-								<DescriptionContainer openDescribe={openDescription.film3}>
-									<p>TEST</p>
-									<p>TESTTTT</p>
-									<p>tesststststts</p>
-								</DescriptionContainer>
-							</div>
-						</ProjectContainer>
-						<TitleMovie>Titre du film</TitleMovie>
-						<ProjectContainer reverse={false}>
-							<ProjectImage>
-								<Player>
-									<source src="videos/A5A_Levasseur_Louise_DemoReel_2023.mp4" />
-								</Player>
-							</ProjectImage>
-							<div className="projet__pre-description">
-								<p>Text pour un projet que tu as réalisé bb</p>
-								<div
-									onClick={() => {
-										openFilm("film4");
-									}}
-								>
-									Description
-								</div>
-								<DescriptionContainer openDescribe={openDescription.film4}>
-									<p>TEST</p>
-									<p>TESTTTT</p>
-									<p>tesststststts</p>
-								</DescriptionContainer>
-							</div>
+									<SeeMoreButton>Voir {!openDescription.film3 ? "plus..." : "moins"}</SeeMoreButton>
+									<SeeMoreArrow openDescribe={openDescription.film3}></SeeMoreArrow>
+								</SeeMoreContainer>
+							</PreDescriptionContainer>
+							<DescriptionContainer openDescribe={openDescription.film3}>
+								<p>Mon court métrage de fin d'étude de bachelor réalisé sur un mois par groupe de 3.</p>
+								<p>
+									J'ai principalement travaillé l'animation 2D rough et clean via ToonBoom Harmony, ainsi que la réalisation de base
+									3D sur maya comme base pour les backgrounds.
+								</p>
+							</DescriptionContainer>
 						</ProjectContainer>
 					</ProjectListContainer>
 				</OtherProjectContainer>

@@ -16,7 +16,10 @@ export const IllustrationContainer = styled.div`
 
     display: ${(props) => (props.isHome ? "none" : "block")};
     width: 100%;
-    margin-top: -1.6vw;
+    overflow: hidden;
+    .wave {
+        width: 100%;
+    }
 
   }
 
@@ -24,7 +27,7 @@ export const IllustrationContainer = styled.div`
 
     margin-top: -5vw;
 
-    @media only screen and (min-width: 1920px) {
+    @media only screen and (min-width: 1440px) {
         margin-top: 3vw;
     }
   }
@@ -45,11 +48,11 @@ export const IllustrationContainer = styled.div`
         margin-top: -5vw;
     }
 
-    @media only screen and (min-width: 1440px) {
+    @media only screen and (min-width: 1200px) {
         font-size: 1.5vw;
     }
 
-    @media only screen and (min-width: 1920px) {
+    @media only screen and (min-width: 1440px) {
         margin-top: 0;
     }
 

@@ -138,14 +138,24 @@ export const HomeContainer = styled.div`
   align-items: center;
   .vague__container {
     /* display: none; */
-    height: 2rem;
+    /* height: 2rem; */
+    /* background-color: red; */
     width: 100vw;
     display: flex;
     align-items: end;
     position: absolute;
-    top: -2rem;
+    top: -7vw;
     z-index: 20;
     cursor: url(${CursorSVG}), auto;
+
+    .vague {
+      /* background-color: #fff; */
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      top: -7.5vw;
+    }
   }
 
   .title__container {
@@ -164,7 +174,7 @@ export const HomeContainer = styled.div`
     }
   }
 
-  @media only screen and (min-width: 1920px) {
+  @media only screen and (min-width: 1440px) {
     margin: 0vw 0;
   }
   }

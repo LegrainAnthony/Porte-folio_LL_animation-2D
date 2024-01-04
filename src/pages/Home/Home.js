@@ -26,7 +26,7 @@ function Home({ getTheCurrentPage, is3020 }) {
 					</div>
 				</div>
 				<div className="video_c">
-					<img className="video" src="images/home/screen_projets.png" />
+					<img className="video" src="images/screen_projets.png" />
 				</div>
 			</div>
 			<div className="page__container">

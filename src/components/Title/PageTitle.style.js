@@ -16,7 +16,7 @@ export const TitleContainer = styled.div`
     }
   }
 
-  @media only screen and (min-width: 1920px) {
+  @media only screen and (min-width: 1440px) {
     margin: 0vw 0;
   }
 

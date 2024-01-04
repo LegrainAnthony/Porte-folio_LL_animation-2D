@@ -12,16 +12,14 @@ flex-direction: column;
 align-items: center;
 
 .wave__container {
-    /* display: ${(props) => (props.isHome ? "none" : "block")};
-    width: 100%;
-    position: absolute;
-    height: 1rem;
-    bottom: 1.2vw;
-    left: 0; */
-
     display: ${(props) => (props.isHome ? "none" : "block")};
     width: 100%;
-    margin-top: -1.6vw;
+
+    .wave {
+        width: 100%;
+    }
+
+    /* margin-top: -1.6vw; */
 
     
   }
@@ -66,6 +64,40 @@ export const PageContainer = styled.div`
         }
     }
 
+    @media only screen and (min-width: 1440px) {
+
+        .title {
+        text-align: center;
+        margin-top: -10vw;
+    }
+        .text__container {
+            margin-top: -1.5vw;
+            font-size: 1.5vw;
+            text-align: center;
+            font-family: 'PPWoodland';
+            color: #89354A ;
+        }
+     
+        .demoreel__container {
+        margin-top: 0vw;
+        .demoreel__title {
+            font-size: 2.5vw;
+            font-family: 'Carena';
+            color: #89354A;
+            padding: 6vw 0;
+        }
+        text-align: center;
+        width: 100%;
+        .video_container {
+            width: 60%;
+            margin-left: 20%;
+         .video {
+            width: 100%;
+         }
+        }
+    }
+    }
+
 `;
 
 export const OtherProjectContainer = styled.div`
@@ -74,11 +106,16 @@ export const OtherProjectContainer = styled.div`
     align-items: center;
 
     h2 {
-
-        padding: 10vw 0;
+        padding: 5vw 0 0 0;
         font-size: 6vw;
         font-family: 'Carena';
         color: #89354A ;
+    }
+
+    @media  only screen and (min-width: 1440px) {
+        h2 {
+            font-size: 2.5vw;
+        }
     }
 
 `;
@@ -86,7 +123,7 @@ export const OtherProjectContainer = styled.div`
 export const ProjectListContainer = styled.div`
 
     @media only screen and (min-width: 1440px) {
-        padding: 10vw; 
+        padding: 5vw 10vw;
     }
 
 `;
@@ -102,16 +139,24 @@ export const TitleMovie = styled.h3`
      &::after {
     content: '';
         position: absolute;
-          //proops
         left: ${(props) => (props.reverse ? "50%" : "0")};
         bottom: -2vw;
         width: 50%;
         height: 15%;
         background-color: #89354A; /* Assurez-vous que cela correspond à la couleur de fond de l'arrière-plan */
         z-index: 1;
-        //proops
         /* text-align: end; */
-    *}
+    }
+
+    @media only screen and (min-width: 1440px) {
+        font-size: 2vw;
+
+        &::after {
+            right: 0%;
+            height: 10%;
+            width: 50%;
+        }
+    }
 
 `;
 
@@ -121,11 +166,18 @@ export const ProjectContainer = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: red;
 
     @media only screen and (min-width: 768px) {
      flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
      position: relative;
+     margin-bottom: 5vw;
     }
+
+    @media only screen and (min-width: 1440px) {
+
+    }
+
 `;
 
 export const PreDescriptionContainer = styled.div`
@@ -136,13 +188,25 @@ export const PreDescriptionContainer = styled.div`
         font-family: 'PPWoodland';
         font-size: 4.5vw;
 
+
+
         @media only screen and (min-width: 768px) {
-          font-size: 2.5vw;
-          padding: 0;
-          height: 28.1vw;
-          padding-left: 2.5vw;
+            display: ${(props) => (props.reverse ? "block" : "flex")};
+            align-items: flex-end;
+            flex-direction: column;
+            font-size: 2.5vw;
+            height: 28.1vw;
+
+
+            .text {
+            max-width: 45%;
+            }
         }
 
+        @media only screen and (min-width: 1440px) {
+            font-size: 1.6vw;
+            height: 22.25vw;
+        }
     
 `;
 
@@ -155,8 +219,21 @@ export const SeeMoreContainer = styled.div`
 
         @media only screen and (min-width: 768px) {
             justify-content: none;
-            max-width: 35%;
+            max-width: 15vw;
+            margin-right: ${(props) => (props.reverse ? "0rem" : "30%")};
+            margin-top: ${(props) => (props.seeMore3020 ? "4vw" : "6vw")};
         }
+
+
+        @media only screen and (min-width: 1440px) {
+            justify-content: none;
+            max-width: 12%;
+            margin-top: 2vw;
+            margin-right: ${(props) => (props.reverse ? "0rem" : "34%")};
+            margin-top: ${(props) => (props.seeMore3020 ? "3vw" : "5vw")};
+            cursor: pointer;
+        }
+
         
 `;
 
@@ -167,7 +244,13 @@ export const SeeMoreButton = styled.div`
 
         @media only screen and (min-width: 768px) {
             font-size: 2vw;
+       
         } 
+
+        @media only screen and (min-width: 1440px) {
+            font-size: 1.2vw;
+
+        }
 
         
 `;
@@ -181,6 +264,10 @@ export const SeeMoreArrow = styled(MdOutlineArrowDropDown)`
         @media only screen and (min-width: 768px) {
             margin-left: 0vw;
         }
+
+        @media only screen and (min-width: 1440px) {
+            margin-bottom: 0vw;
+        }
 `;
 
 export const Synopsis = styled.p`
@@ -188,24 +275,31 @@ export const Synopsis = styled.p`
         margin-bottom: 4vw;
         font-size: 4vw;
         font-weight: 700;
+      
 
         @media only screen and (min-width: 768px) {
             font-size: 2vw;
-            margin-top: 3.5vw;
+            margin-right: ${(props) => (props.reverse ? "0rem" : "35%")};
         }
+
+        @media only screen and (min-width: 1440px) {
+            font-size: 1.5vw;
+            margin-bottom: 3vw;
+        }
+
+        
 `;
 
 export const ProjectImage = styled.div`
     width: 100%;
-
-
-
+    position: relative;
     img {
         width: 100%;
     }
 
     @media only screen and (min-width: 768px) {
-        background-color: red;  
+        position: absolute;
+        top: 0;
         max-width: 50%;
         max-height: 50%;
         .img {
@@ -232,12 +326,9 @@ export const DescriptionContainer = styled.div`
         padding-top: 2rem;
     }
 
-    @media only screen and (min-width: 768px) {
-            position: absolute;
-            height: ${(props) => (!props.openDescribe ? "0vw" : "17vw")};
-            bottom: ${(props) => (!props.openDescribe ? "0vw" : "-17vw")};
+     @media only screen and (min-width: 768px) {
             font-size: 2.5vw;
-
+            height: ${(props) => (!props.openDescribe ? "0vw" : "16vw")};
             p:first-child{
                 padding-top: 2.5vw;
             }   
@@ -245,6 +336,11 @@ export const DescriptionContainer = styled.div`
             .see3020 {
                 padding-top: 1.5vw;
             } 
+    }
+
+    @media only screen and (min-width: 1440px) {
+        font-size: 1.5vw;
+        height: ${(props) => (!props.openDescribe ? "0vw" : "12vw")};
     }
 
 `;

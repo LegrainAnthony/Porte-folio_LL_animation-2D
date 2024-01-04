@@ -42,12 +42,10 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 		});
 	};
 
-	console.log(openDescription);
-
 	return (
 		<AnimationContainer>
 			<div className="wave__container">
-				<img className="wave" src={!is3020 ? "SVG/wave-2.svg" : "SVG/wave-black.svg"} />
+				<img className="wave" src={"SVG/wave_2.svg"} />
 			</div>
 			<PageContainer>
 				<PageTitle>
@@ -76,23 +74,28 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 									<source src="videos/3020_H264.mp4" />
 								</Player>
 							</ProjectImage>
-							<PreDescriptionContainer>
-								<Synopsis>Synopsis :</Synopsis>
-								<p>Une adolescente témoin d'une scène de harcèlement se retrouve plongée dans ses pensées et angoisses.</p>
+							<div>
+								<PreDescriptionContainer reverse={true}>
+									<Synopsis>Synopsis :</Synopsis>
+									<p className="text">
+										Une adolescente témoin d'une scène de harcèlement se retrouve plongée dans ses pensées et angoisses.
+									</p>
 
-								<SeeMoreContainer
-									onClick={() => {
-										openFilm("film");
-									}}
-								>
-									<SeeMoreButton>Voir {!openDescription.film ? "plus..." : "moins"}</SeeMoreButton>
-									<SeeMoreArrow openDescribe={openDescription.film}></SeeMoreArrow>
-								</SeeMoreContainer>
-							</PreDescriptionContainer>
-							<DescriptionContainer openDescribe={openDescription.film}>
-								<p>Mon court métrage de fin d'étude réalisé par groupe de 3 sur 2 ans.</p>
-								<p className="see3020">Pour plus d'information, voir page 3020.</p>
-							</DescriptionContainer>
+									<SeeMoreContainer
+										seeMore3020={true}
+										onClick={() => {
+											openFilm("film");
+										}}
+									>
+										<SeeMoreButton>Voir {!openDescription.film ? "plus..." : "moins"}</SeeMoreButton>
+										<SeeMoreArrow openDescribe={openDescription.film}></SeeMoreArrow>
+									</SeeMoreContainer>
+								</PreDescriptionContainer>
+								<DescriptionContainer openDescribe={openDescription.film}>
+									<p>Mon court métrage de fin d'étude réalisé par groupe de 3 sur 2 ans.</p>
+									<p className="see3020">Pour plus d'information, voir page 3020.</p>
+								</DescriptionContainer>
+							</div>
 						</ProjectContainer>
 						<TitleMovie reverse={false}>PEDILUVE</TitleMovie>
 						<ProjectContainer reverse={false}>
@@ -101,28 +104,31 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 									<source src="videos/3020_H264.mp4" />
 								</Player>
 							</ProjectImage>
-							<PreDescriptionContainer>
-								<Synopsis>Synopsis :</Synopsis>
-								<p>Une femme seule à la piscine plongeant dans l'eau.</p>
+							<div>
+								<PreDescriptionContainer reverse={false}>
+									<Synopsis>Synopsis :</Synopsis>
+									<p className="text">Une femme seule à la piscine plongeant dans l'eau.</p>
 
-								<SeeMoreContainer
-									onClick={() => {
-										openFilm("film2");
-									}}
-								>
-									<SeeMoreButton>Voir {!openDescription.film2 ? "plus..." : "moins"}</SeeMoreButton>
-									<SeeMoreArrow openDescribe={openDescription.film2}></SeeMoreArrow>
-								</SeeMoreContainer>
-							</PreDescriptionContainer>
-							<DescriptionContainer openDescribe={openDescription.film2}>
-								<p>
-									Petit court métrage en collaboration avec les Master 1 lorsque j'étais en master 2 dans le cadre du cours de
-									spécialisation d'animation 2D sur 2 mois.
-								</p>
-								<p>
-									Pour ce projet j'ai travaillé sur de l'animation rough, clean (ToonBoom Harmony) et le Compositing (After effect).
-								</p>
-							</DescriptionContainer>
+									<SeeMoreContainer
+										onClick={() => {
+											openFilm("film2");
+										}}
+									>
+										<SeeMoreButton>Voir {!openDescription.film2 ? "plus..." : "moins"}</SeeMoreButton>
+										<SeeMoreArrow openDescribe={openDescription.film2}></SeeMoreArrow>
+									</SeeMoreContainer>
+								</PreDescriptionContainer>
+								<DescriptionContainer openDescribe={openDescription.film2}>
+									<p>
+										Petit court métrage en collaboration avec les Master 1 lorsque j'étais en master 2 dans le cadre du cours de
+										spécialisation d'animation 2D sur 2 mois.
+									</p>
+									<p>
+										Pour ce projet j'ai travaillé sur de l'animation rough, clean (ToonBoom Harmony) et le Compositing (After
+										effect).
+									</p>
+								</DescriptionContainer>
+							</div>
 						</ProjectContainer>
 						<TitleMovie reverse={true}>Comment je me suis fait virer</TitleMovie>
 						<ProjectContainer reverse={true}>
@@ -131,26 +137,28 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 									<source src="videos/3020_H264.mp4" />
 								</Player>
 							</ProjectImage>
-							<PreDescriptionContainer>
-								<Synopsis>Synopsis :</Synopsis>
-								<p>Un vampire fait son entrée sur scène mais se retrouve réduit en cendres.</p>
+							<div>
+								<PreDescriptionContainer reverse={true}>
+									<Synopsis>Synopsis :</Synopsis>
+									<p className="text">Un vampire fait son entrée sur scène mais se retrouve réduit en cendres.</p>
 
-								<SeeMoreContainer
-									onClick={() => {
-										openFilm("film3");
-									}}
-								>
-									<SeeMoreButton>Voir {!openDescription.film3 ? "plus..." : "moins"}</SeeMoreButton>
-									<SeeMoreArrow openDescribe={openDescription.film3}></SeeMoreArrow>
-								</SeeMoreContainer>
-							</PreDescriptionContainer>
-							<DescriptionContainer openDescribe={openDescription.film3}>
-								<p>Mon court métrage de fin d'étude de bachelor réalisé sur un mois par groupe de 3.</p>
-								<p>
-									J'ai principalement travaillé l'animation 2D rough et clean via ToonBoom Harmony, ainsi que la réalisation de base
-									3D sur maya comme base pour les backgrounds.
-								</p>
-							</DescriptionContainer>
+									<SeeMoreContainer
+										onClick={() => {
+											openFilm("film3");
+										}}
+									>
+										<SeeMoreButton>Voir {!openDescription.film3 ? "plus..." : "moins"}</SeeMoreButton>
+										<SeeMoreArrow openDescribe={openDescription.film3}></SeeMoreArrow>
+									</SeeMoreContainer>
+								</PreDescriptionContainer>
+								<DescriptionContainer openDescribe={openDescription.film3}>
+									<p>Mon court métrage de fin d'étude de bachelor réalisé sur un mois par groupe de 3.</p>
+									<p>
+										J'ai principalement travaillé l'animation 2D rough et clean via ToonBoom Harmony, ainsi que la réalisation de
+										base 3D sur maya comme base pour les backgrounds.
+									</p>
+								</DescriptionContainer>
+							</div>
 						</ProjectContainer>
 					</ProjectListContainer>
 				</OtherProjectContainer>

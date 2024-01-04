@@ -30,7 +30,7 @@ const Illustration = ({ getTheCurrentPage, is3020 }) => {
 	return (
 		<IllustrationContainer>
 			<div className="wave__container">
-				<img className="wave" src={!is3020 ? "SVG/wave-2.svg" : "SVG/wave-black.svg"} />
+				<img className="wave" src={"SVG/wave_2.svg"} />
 			</div>
 			<PageTitle>
 				<h2 className="title">Illustration</h2>

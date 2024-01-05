@@ -12,7 +12,6 @@ flex-direction: column;
 align-items: center;
 
 .wave__container {
-    display: ${(props) => (props.isHome ? "none" : "block")};
     width: 100%;
 
     .wave {

@@ -50,7 +50,7 @@ const Navigation = ({ is3020, isHome }) => {
 						</NavbarItem>
 						<NavbarItem>
 							<NavbarLink to="/Contact" onClick={handleClick} is3020={is3020}>
-								CONTACT
+								CV
 							</NavbarLink>
 						</NavbarItem>
 					</ul>

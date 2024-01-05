@@ -13,8 +13,6 @@ export const IllustrationContainer = styled.div`
   background-color: #FFEBEB;
 
   .wave__container {
-
-    display: ${(props) => (props.isHome ? "none" : "block")};
     width: 100%;
     overflow: hidden;
     .wave {

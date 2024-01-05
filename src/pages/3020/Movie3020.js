@@ -11,40 +11,38 @@ const Movie3020 = ({ getTheCurrentPage, is3020 }) => {
 	const images3D = [
 		{
 			id: 1,
-			src: "images/3D/3D1.png",
+			src: "3020/01.webp",
 			alt: "3D1"
 		},
 		{
 			id: 2,
-			src: "images/3D/3D2.png",
+			src: "3020/02.webp",
 			alt: "3D2"
 		},
 		{
 			id: 3,
-			src: "images/3D/3D3.png",
+			src: "3020/03.webp",
 			alt: "3D3"
 		},
 		{
 			id: 4,
-			src: "images/3D/3D4.png",
+			src: "3020/04.webp",
 			alt: "3D4"
 		},
 		{
 			id: 5,
-			src: "images/3D/3D5.png",
+			src: "3020/05.webp",
 			alt: "3D5"
 		},
 		{
 			id: 6,
-			src: "images/3D/3D6.png",
+			src: "3020/06.webp",
 			alt: "3D6"
 		}
 	];
 
 	return (
 		<MovieContainer props={is3020}>
-			<img className="louise-and-pepsi-glitched" src="images/louise-glitch.png" alt="aaaaaaaa" />
-			<img className="eyes" src="images/eyes.png" alt="aaaaaaaa" />
 			<PagesContainer props={is3020}>
 				{/* <div class="glitch-bloc">
             <p class="invisible-text">Movie3020</p>
@@ -57,8 +55,8 @@ const Movie3020 = ({ getTheCurrentPage, is3020 }) => {
 				</div>
 				<div className="paragraphs__container">
 					<p className="paragraph  paragraph1 SpecialElite">
-						Voici 3020 : Le film de fin d'étude que je réalise a ECV Bordeaux dans le but de valider mon master en cinema d'animation 2D.
-						Ce projet est réalisé en deux ans en compagnie de{" "}
+						Voici 3020 : Le film de fin d'étude que j'ai réalisé a ECV Bordeaux pour valider mon master en cinema d'animation 2D Ce projet
+						a été réalisé en deux ans en compagnie de{" "}
 						<a className="link-name" href="https://maudpotatoes.wixsite.com/portfolio" target="_blank" rel="noopener noreferrer">
 							Maud Roger{" "}
 						</a>{" "}
@@ -69,9 +67,10 @@ const Movie3020 = ({ getTheCurrentPage, is3020 }) => {
 						.
 					</p>
 					<p className="paragraph paragraph2 SpecialElite">
-						<span className="synopsis">Synopsis</span> : Marion, une jeune lycéenne dans une cafétéria se retrouve face à une entité
-						perturbante qu’elle va devoir affronter pour s’en sortir.
+						<span className="synopsis">Synopsis</span> : une adolescente témoin d'une scène de harcèlement se retrouve plongée dans ses
+						pensées et angoisses.
 					</p>
+					//! FILM
 					<div className="annee1__container">
 						<h2 className="annee annee1 AmaticSC">ANNEE 01 </h2>
 					</div>
@@ -93,19 +92,37 @@ const Movie3020 = ({ getTheCurrentPage, is3020 }) => {
 					<div className="paragraphs__container-gif">
 						<p className="paragraph-gif SpecialElite">J'ai également réaliser un turn animé de notre héroine principal</p>
 					</div>
-					<img className="gif-image" src="images/Marion_Turn_Web.gif" alt="gif" />
+					<img className="gif-image" src="3020/Marion_Turn_Web2.gif" alt="gif" />
 				</div>
 				<div className="paragraphs__container bloc-gif">
 					<div className="annee1__container">
 						<h2 className="annee annee1 AmaticSC">ANNEE 02</h2>
-						<p className="paragraph paragraph5 SpecialElite">Durant la 2e année de master, nous sommes en Production :</p>
+						<p className="paragraph paragraph5 SpecialElite">
+							La deuxième année de master a été l'année de la production et de la post-production :{" "}
+						</p>
 						<p className="paragraph paragraph6 SpecialElite">
-							Cette année, j'ai directement commencé par ouvrir de nouveau mon fichier 3D sur maya, et j'ai exporté un à un les plans,
-							permettant de réaliser un Layout Background à partir de cette 3D nous permettant de trouver la DA, et également de gagner
-							du temps dans la production des décors.
+							Pour cette année, j'ai directement commencé par ouvrir de nouveau mon fichier 3D sur maya, et j'ai exporté un à un les
+							plans, permettant de réaliser un Layout Background à partir de cette 3D nous permettant de trouver la DA, et également de
+							gagner du temps dans la production des décors.
 						</p>
 						<p className="paragraph paragraph7 SpecialElite">
-							Qui dit production, dit animation : j'occupe également le poste d'animatrice 2D au sein de notre groupe.
+							Qui dit production, dit animation : j'ai également occupé le poste d'animatrice 2D au sein de notre groupe.
+						</p>
+
+						<p>
+							Au cours de l'année nous avons dû également trouvé des doubleurs pour notre film, et pour cela, nous avons mis des
+							affiches à l'école ainsi que dans des écoles et clubs de théâtre. De ce fait notre casting a été assez rapidement terminé
+							ainsi que les séances d'enregistrement.
+						</p>
+
+						<p>
+							Durant les 2-3 derniers mois, nous avons demandé de l'aide aux M1 de notre école, et j'ai moi même pris en main
+							l'organisation avec les Master 1 : préparation des scènes à clean, les échanges avec eux, les retakes à effectuer etc...
+						</p>
+
+						<p>
+							Ce fut un énorme travail à faire pour une petite équipe comme la notre, mais grâce aux Master 1 pour leurs aides, et à nos
+							proches pour leur soutien, nous avons réussi à terminer ce film et nous en sommes très fières.
 						</p>
 
 						<div className="compilation__container">

@@ -9,6 +9,10 @@ export const TitleContainer = styled.div`
       color: #89354a;
     }
 
+    @media only screen and (min-width: 768px) {
+    margin: 5vw 0;
+  }
+
   @media only screen and (min-width: 1200px) {
     margin: 3vw 0;
     .title {

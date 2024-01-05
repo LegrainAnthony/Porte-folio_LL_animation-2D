@@ -1,13 +1,29 @@
 import { Link } from "react-router-dom";
 import Navigation from "../../components/Header/Header";
+import { useNavigate } from "react-router-dom";
 import { HomeContainer, PagesContainer } from "./Home.style";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import PageTitle from "../../components/Title/PageTitle";
 
 function Home({ getTheCurrentPage, is3020 }) {
+	const navigate = useNavigate();
+
+	const videoRef = useRef(null);
+
 	useEffect(() => {
 		getTheCurrentPage();
 	}, []);
+
+	const playVideo = () => {
+		videoRef.current.play();
+	};
+
+	const stopAndResetVideo = () => {
+		const video = videoRef.current;
+		video.pause();
+		video.currentTime = 0;
+		video.load();
+	};
 
 	return (
 		<HomeContainer>
@@ -18,7 +34,15 @@ function Home({ getTheCurrentPage, is3020 }) {
 						<h1 className="info__title">Louise Levasseur</h1>
 						<h2 className="info__sub-title">Animation 2D</h2>
 					</div>
-					<div className="info__button">
+					<div
+						className="info__button"
+						onMouseEnter={playVideo}
+						onMouseLeave={stopAndResetVideo}
+						onClick={() => {
+							console.log("ici");
+							navigate("/Animation2D");
+						}}
+					>
 						<p className="text__button">Projets</p>
 					</div>
 					<div className="pawn__container">
@@ -26,7 +50,9 @@ function Home({ getTheCurrentPage, is3020 }) {
 					</div>
 				</div>
 				<div className="video_c">
-					<img className="video" src="images/screen_projets.png" />
+					<video className="video" ref={videoRef} poster="images/screen_projets.png" muted playsInline>
+						<source src="FILM/Preview_w_minia2.mp4" />
+					</video>
 				</div>
 			</div>
 			<div className="page__container">

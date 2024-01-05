@@ -45,22 +45,25 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 	return (
 		<AnimationContainer>
 			<div className="wave__container">
-				<img className="wave" src={"SVG/wave_2.svg"} />
+				<img className="wave" src={"SVG/header_wave2.svg"} />
 			</div>
 			<PageContainer>
 				<PageTitle>
 					<h1 className="title">Animation 2D</h1>
 				</PageTitle>
 				<div className="text__container">
-					<p className="text">TEXT BIDON A RAJOUTER POUR TE FAIRE RECRUTER ET GAGNER DE LA MOULAGA</p>
+					<p className="text">
+						Durant mon parcours à ECV, j'ai pu réaliser de nombreuses animations 2D, que ce soit pour des exercices de cours, des projets
+						de groupe, des idées personnels ou encore pour mon stage ! Et les voici ici !
+					</p>
 				</div>
 
 				<div className="demoreel__container">
 					<h2 className="demoreel__title">Ma demo reel 2023</h2>
 					<div className="video_container">
 						<link rel="stylesheet" href="https://video-react.github.io/assets/video-react.css" />
-						<Player>
-							<source src="videos/A5A_Levasseur_Louise_DemoReel_2023.mp4" />
+						<Player poster="images/miniatures/miniature_demoreel.png">
+							<source src="FILM/Demoreel_2023_job.mp4" />
 						</Player>
 					</div>
 				</div>
@@ -70,8 +73,8 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 						<TitleMovie reverse={true}>3020</TitleMovie>
 						<ProjectContainer reverse={true}>
 							<ProjectImage>
-								<Player poster="images/miniatures/miniature_3020.png">
-									<source src="videos/3020_H264.mp4" />
+								<Player poster="images/miniatures/miniature_3020_169.png">
+									<source src="FILM/3020.mp4" />
 								</Player>
 							</ProjectImage>
 							<div>
@@ -93,15 +96,20 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 								</PreDescriptionContainer>
 								<DescriptionContainer openDescribe={openDescription.film}>
 									<p>Mon court métrage de fin d'étude réalisé par groupe de 3 sur 2 ans.</p>
-									<p className="see3020">Pour plus d'information, voir page 3020.</p>
+									<p className="see3020">
+										Pour plus d'information,{" "}
+										<Link className="link" to={"/Movie3020"}>
+											voir page 3020.{" "}
+										</Link>{" "}
+									</p>
 								</DescriptionContainer>
 							</div>
 						</ProjectContainer>
 						<TitleMovie reverse={false}>PEDILUVE</TitleMovie>
 						<ProjectContainer reverse={false}>
 							<ProjectImage>
-								<Player poster="images/miniatures/miniature_pediluve.png">
-									<source src="videos/3020_H264.mp4" />
+								<Player poster="images/miniatures/miniature_P_169.png">
+									<source src="FILM/PEDILUVE.mp4" />
 								</Player>
 							</ProjectImage>
 							<div>
@@ -134,7 +142,7 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 						<ProjectContainer reverse={true}>
 							<ProjectImage>
 								<Player poster="images/miniatures/miniature_cjmsfv.png">
-									<source src="videos/3020_H264.mp4" />
+									<source src="FILM/cjmsfv.mp4" />
 								</Player>
 							</ProjectImage>
 							<div>

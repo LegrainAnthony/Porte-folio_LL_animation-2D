@@ -30,11 +30,12 @@ export const PageContainer = styled.div`
 
     .title {
         text-align: center;
-        margin-top: -5vw;
+        margin-top: -10vw;
     }
     .text__container {
-        margin-top: 3vw;
+        margin-top: 0vw;
         font-size: 5vw;
+        padding: 1vw;
         text-align: center;
         font-family: 'PPWoodland';
         color: #89354A ;
@@ -64,15 +65,39 @@ export const PageContainer = styled.div`
         }
     }
 
+    @media only screen and (min-width: 768px) {
+
+        .title {
+            margin-top: -6vw;
+            font-size: 7vw;
+            letter-spacing: 2px;
+            margin-bottom: -10vw;
+        }
+
+        .text__container {
+            font-size: 3vw;
+        }
+
+    .demoreel__container {
+        margin-top: 0;
+        .demoreel__title {
+            font-size: 4.5vw;
+        }
+    }
+    }
+
     @media only screen and (min-width: 1440px) {
 
         .title {
-        text-align: center;
-        margin-top: -10vw;
-    }
+            text-align: center;
+            margin-top: -1vw;
+            font-size: 4vw;
+        }
+
         .text__container {
-            margin-top: -1.5vw;
+            margin-top: 8vw;
             font-size: 1.5vw;
+            padding: 0 10vw;
             text-align: center;
             font-family: 'PPWoodland';
             color: #89354A ;
@@ -84,7 +109,7 @@ export const PageContainer = styled.div`
             font-size: 2.5vw;
             font-family: 'Carena';
             color: #89354A;
-            padding: 6vw 0;
+            padding: 5vw 0 3vw 0;
         }
         text-align: center;
         width: 100%;
@@ -108,13 +133,22 @@ export const OtherProjectContainer = styled.div`
     h2 {
         padding: 5vw 0 0 0;
         font-size: 6vw;
+        margin-bottom: 2.5vw;
         font-family: 'Carena';
         color: #89354A ;
+    }
+
+    @media  only screen and (min-width: 768px) {
+        h2 {
+            font-size: 4.5vw;
+            margin-bottom: 2.5vw;
+        }
     }
 
     @media  only screen and (min-width: 1440px) {
         h2 {
             font-size: 2.5vw;
+            padding: 2.8vw 0 0 0;
         }
     }
 
@@ -123,7 +157,8 @@ export const OtherProjectContainer = styled.div`
 export const ProjectListContainer = styled.div`
 
     @media only screen and (min-width: 1440px) {
-        padding: 5vw 10vw;
+        padding: 0vw 10vw;
+        margin-top: -2vw;
     }
 
 `;
@@ -162,11 +197,10 @@ export const TitleMovie = styled.h3`
 
 export const ProjectContainer = styled.div`
     width: 100%;
-    margin-bottom: 20vw;
+    margin-bottom: 5vw;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: red;
 
     @media only screen and (min-width: 768px) {
      flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
@@ -175,7 +209,7 @@ export const ProjectContainer = styled.div`
     }
 
     @media only screen and (min-width: 1440px) {
-
+        margin-bottom: 3vw;
     }
 
 `;
@@ -324,6 +358,12 @@ export const DescriptionContainer = styled.div`
 
     .see3020 {
         padding-top: 2rem;
+        .link {
+            text-decoration: none;
+            font-family: 'Special Elite';
+            position: relative;
+            color: #551A8B;    
+        }
     }
 
      @media only screen and (min-width: 768px) {
@@ -341,6 +381,29 @@ export const DescriptionContainer = styled.div`
     @media only screen and (min-width: 1440px) {
         font-size: 1.5vw;
         height: ${(props) => (!props.openDescribe ? "0vw" : "12vw")};
+
+
+        .see3020 {
+        .link {
+            font-size: 1.4vw;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                transition: 0.2s ease-in-out;
+                background-color: #551A8B;
+           
+            }
+
+            &:hover::after {
+                width: 100%;
+            }    
+        }
+    }
+       
     }
 
 `;

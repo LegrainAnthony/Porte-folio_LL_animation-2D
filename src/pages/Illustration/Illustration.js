@@ -11,26 +11,28 @@ const Illustration = ({ getTheCurrentPage, is3020 }) => {
 	const [previewIndex, setPreviewIndex] = useState(0); // État pour gérer l'index de l'image sélectionnée
 
 	const images = [
-		"images/illustrations/illu10.png",
-		"images/illustrations/illu2.png",
-		"images/illustrations/illu3.png",
-		"images/illustrations/illu4.png",
-		"images/illustrations/illu5.png",
-		"images/illustrations/illu7.png",
-		"images/illustrations/illu8.png",
-		"images/illustrations/illu9.png",
-		"images/illustrations/illu1.png",
-		"images/illustrations/illu11.png",
-		"images/illustrations/illu12.png",
-		"images/illustrations/illu13.png",
-		"images/illustrations/illu14.png",
-		"images/illustrations/illu15.png"
+		"images/illustrations/jolie.webp",
+		"images/illustrations/ice.webp",
+		"images/illustrations/musa.webp",
+		"images/illustrations/eye.webp",
+		"images/illustrations/cartoon_me.webp",
+		"images/illustrations/power.webp",
+		"images/illustrations/pinky.webp",
+		"images/illustrations/pepsi.webp",
+		"images/illustrations/challenge_ghibli.webp",
+		"images/illustrations/balancoire.webp",
+		"images/illustrations/marie.webp",
+		"images/illustrations/ruben.webp",
+		"images/illustrations/dac.webp",
+		"images/illustrations/maelle.webp",
+		"images/illustrations/hug.webp",
+		"images/illustrations/forest.webp"
 	];
 
 	return (
 		<IllustrationContainer>
 			<div className="wave__container">
-				<img className="wave" src={"SVG/wave_2.svg"} />
+				<img className="wave" src={"SVG/header_wave2.svg"} />
 			</div>
 			<PageTitle>
 				<h2 className="title">Illustration</h2>

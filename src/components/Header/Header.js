@@ -29,27 +29,27 @@ const Navigation = ({ is3020, isHome }) => {
 				<NavBarContainer open={open} is3020={is3020}>
 					<ul className="navbar__list">
 						<NavbarItem>
-							<NavbarLink to="/" onClick={closeBurgerCurrentPage} is3020={is3020}>
+							<NavbarLink to="/" onClick={handleClick} is3020={is3020}>
 								HOME
 							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>
-							<NavbarLink to="/Animation2D" onClick={closeBurgerCurrentPage} is3020={is3020}>
+							<NavbarLink to="/Animation2D" onClick={handleClick} is3020={is3020}>
 								ANIMATION 2D
 							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>
-							<NavbarLink to={is3020 ? "/" : "/Movie3020"} onClick={closeBurgerCurrentPage} is3020={is3020}>
+							<NavbarLink to={is3020 ? "/" : "/Movie3020"} onClick={handleClick} is3020={is3020}>
 								{!is3020 ? "3020" : <img className="image-3020" src="images/3020.png" alt="" />}
 							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>
-							<NavbarLink to="/Illustration" onClick={closeBurgerCurrentPage} is3020={is3020}>
+							<NavbarLink to="/Illustration" onClick={handleClick} is3020={is3020}>
 								ILLUSTRATION
 							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>
-							<NavbarLink to="/Contact" onClick={closeBurgerCurrentPage} is3020={is3020}>
+							<NavbarLink to="/Contact" onClick={handleClick} is3020={is3020}>
 								CONTACT
 							</NavbarLink>
 						</NavbarItem>

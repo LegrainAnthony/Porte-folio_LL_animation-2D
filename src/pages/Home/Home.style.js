@@ -132,14 +132,10 @@ export const HomeContainer = styled.div`
   /* display: none; */
 .page__container {
   position: relative;
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   .vague__container {
-    /* display: none; */
-    /* height: 2rem; */
-    /* background-color: red; */
     width: 100vw;
     display: flex;
     align-items: end;

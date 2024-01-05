@@ -27,15 +27,24 @@ export const IllustrationContainer = styled.div`
 
     margin-top: -5vw;
 
+    @media only screen and (min-width: 768px) {
+            margin-top: 0.8vw;
+            font-size: 7vw;
+            letter-spacing: 2px;
+            margin-bottom: 0vw;
+    }
+
     @media only screen and (min-width: 1440px) {
-        margin-top: 3vw;
+        margin-top: 2.5vw;
+        font-size: 4vw;
+        letter-spacing: 2px;
     }
   }
 
 
   .paragraph__container {
     margin-top: -5vw;
-    padding: 5vw;
+    padding: 5vw 10vw;
     font-family: 'PPWoodland';
     text-align: center;
     color: #89354A;
@@ -46,6 +55,9 @@ export const IllustrationContainer = styled.div`
 
     @media only screen and (min-width: 768px) {
         margin-top: -5vw;
+        padding: 5vw 5vw;
+        font-size: 3vw;
+
     }
 
     @media only screen and (min-width: 1200px) {

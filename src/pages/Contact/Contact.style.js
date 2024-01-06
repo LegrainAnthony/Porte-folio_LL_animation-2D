@@ -41,6 +41,8 @@ export const TitleContainer = styled.div`
       .title {
         font-size: 4vw;
         margin-bottom: 2vw;
+        margin-top: 1.5vw;
+        letter-spacing: 2px;
       }
     };
 `;

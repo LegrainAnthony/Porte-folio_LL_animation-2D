@@ -46,18 +46,18 @@ function Home({ getTheCurrentPage, is3020 }) {
 						<p className="text__button">Projets</p>
 					</div>
 					<div className="pawn__container">
-						<img className="reversed__pawn" src="SVG/pink_pawn.svg" />
+						<img className="reversed__pawn" src="svg/pink_pawn.svg" />
 					</div>
 				</div>
 				<div className="video_c">
-					<video className="video" ref={videoRef} poster="images/screen_projets.png" muted playsInline>
-						<source src="FILM/Preview_w_minia2.mp4" />
+					<video className="video" ref={videoRef} poster="images/miniatures/3020.png" muted playsInline>
+						<source src="videos/home/preview.mp4" />
 					</video>
 				</div>
 			</div>
 			<div className="page__container">
 				<div className="vague__container">
-					<img className="vague" src="SVG/vague_1.svg" />
+					<img className="vague" src="svg/wave_home.svg" />
 				</div>
 				<PageTitle>
 					<h2 className="title">Bienvenue !</h2>

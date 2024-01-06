@@ -32,7 +32,7 @@ export const HomeContainer = styled.div`
           position: absolute;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-evenly;
           align-items: center;
           padding-bottom: 6vw;
           padding-top: 3vw;
@@ -117,9 +117,11 @@ export const HomeContainer = styled.div`
       }
 
         .pawn__container {
+          display: none;
           width: 5vw;
           
           @media only screen and (min-width: 768px) {
+            display: block;
             width: 3vw;
           }
 
@@ -127,6 +129,11 @@ export const HomeContainer = styled.div`
 
         }
       }
+
+      @media only screen and (min-width: 768px) {
+            .infos__container {
+              justify-content: space-between;
+            }}
   }
   
   /* display: none; */

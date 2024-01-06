@@ -133,7 +133,7 @@ export const NavbarLink = styled(Link)`
   font-size: 4vw;
 
   .image-3020 {
-    width: 3rem;
+    width: 10vw;
   }
 
   @media (min-width: 768px) {
@@ -142,6 +142,10 @@ export const NavbarLink = styled(Link)`
     text-align: center;
     color: ${(props) => (!props.is3020 ? "#89354A" : "#fff")};
     font-size: 2vw;
+
+    .image-3020 {
+    width: 5vw;
+    }
     
    
       /* margin-top: 0.1rem; */
@@ -149,12 +153,20 @@ export const NavbarLink = styled(Link)`
   }
 
   @media (min-width: 1024px) {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
+
+    .image-3020 {
+      width: 3vw;
+    }
   }
 
   @media only screen and (min-width: 1440px) {
     margin-right: 5rem;
-    font-size: 1.5rem;
+    font-size: 1vw;
+
+    .image-3020 {
+      width: 2vw;
+    }
     position: relative;
     &::after {
       content: "";

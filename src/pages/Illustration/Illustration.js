@@ -3,9 +3,26 @@ import { IllustrationContainer, ImagesContainer, Ilustration } from "./Illustrat
 import { Image, Modal } from "antd";
 import { useEffect, useState } from "react";
 import PageTitle from "../../components/Title/PageTitle";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 const Illustration = ({ getTheCurrentPage, is3020 }) => {
 	useEffect(() => {
 		getTheCurrentPage();
+		const tl = gsap.timeline({ repeat: 0, repeatDelay: 0.1 });
+		tl.to(".image", {
+			// Utilisation de la classe 'image'
+			duration: 0.2,
+			opacity: 1,
+			ease: "power1.inOut",
+			stagger: {
+				amount: 1.5,
+				grid: [4, 3], // grid défini ici
+				axis: null,
+				ease: "none",
+				from: "start"
+			}
+		});
 	}, []);
 
 	const [previewIndex, setPreviewIndex] = useState(0); // État pour gérer l'index de l'image sélectionnée
@@ -32,7 +49,7 @@ const Illustration = ({ getTheCurrentPage, is3020 }) => {
 	return (
 		<IllustrationContainer>
 			<div className="wave__container">
-				<img className="wave" src={"SVG/header_wave2.svg"} />
+				<img className="wave" src={"svg/header_wave.svg"} />
 			</div>
 			<PageTitle>
 				<h2 className="title">Illustration</h2>

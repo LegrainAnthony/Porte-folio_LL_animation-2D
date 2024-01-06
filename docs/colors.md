@@ -3,4 +3,5 @@ Rouge main text : #89354A
 COULOUR LOUISE LEVASSEUR : #FFEDED
 rose (header acceuil) : #FFD9D8
 BLEUE le plus foncé : #252649
+bleu: clair : #32335e
 jaune : #fde702

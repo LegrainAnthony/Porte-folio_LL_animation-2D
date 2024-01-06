@@ -14,20 +14,20 @@ const Contact = ({ getTheCurrentPage, is3020 }) => {
 	return (
 		<ContactContainer>
 			<div className="wave__container">
-				<img className="wave" src={"SVG/header_wave2.svg"} />
+				<img className="wave" src={"svg/header_wave.svg"} />
 			</div>
 			<TitleContainer>
 				<PageTitle>
 					<h2 className="title">Mon CV</h2>
 				</PageTitle>
 				<DownloadButton>
-					<a className="download__link" href="images/CV_2023.pdf" download="Louise_Levasseur_CV_2023.pdf">
+					<a className="download__link" href="pdf/CV_2023.pdf" download="Louise_Levasseur_CV_2023.pdf">
 						Télécharger mon CV
 					</a>
 				</DownloadButton>
 			</TitleContainer>
 			<CvContainer>
-				<Image src="images/CV_2023.png" className="image" />
+				<Image src="images/cv/CV_2023.png" className="image" />
 			</CvContainer>
 		</ContactContainer>
 	);

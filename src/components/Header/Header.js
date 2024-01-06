@@ -23,7 +23,7 @@ const Navigation = ({ is3020, isHome }) => {
 				{/* mask */}
 				<div className="logo__container">
 					{open && <div className="exitDiv" onClick={handleClick}></div>}
-					<img className="logo" src={!is3020 ? "SVG/logo.svg" : "SVG/logo-yellow.svg"} />
+					<img className="logo" src={!is3020 ? "svg/logo.svg" : "svg/logo-yellow.svg"} />
 				</div>
 				{/* div qui sort de la navbar */}
 				<NavBarContainer open={open} is3020={is3020}>
@@ -39,8 +39,8 @@ const Navigation = ({ is3020, isHome }) => {
 							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>
-							<NavbarLink to={is3020 ? "/" : "/Movie3020"} onClick={handleClick} is3020={is3020}>
-								{!is3020 ? "3020" : <img className="image-3020" src="images/3020.png" alt="" />}
+							<NavbarLink to={"/Movie3020"} onClick={handleClick} is3020={is3020}>
+								{!is3020 ? "3020" : <img className="image-3020" src="svg/3020.svg" alt="" />}
 							</NavbarLink>
 						</NavbarItem>
 						<NavbarItem>

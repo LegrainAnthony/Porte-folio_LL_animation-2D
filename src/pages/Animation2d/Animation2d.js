@@ -29,6 +29,9 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 		film4: false
 	});
 
+	const pathFilms = "videos/animation";
+	const pathMiniatures = "images/miniatures/";
+
 	useEffect(() => {
 		getTheCurrentPage();
 	}, []);
@@ -45,7 +48,7 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 	return (
 		<AnimationContainer>
 			<div className="wave__container">
-				<img className="wave" src={"SVG/header_wave2.svg"} />
+				<img className="wave" src={"svg/header_wave.svg"} />
 			</div>
 			<PageContainer>
 				<PageTitle>
@@ -62,8 +65,8 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 					<h2 className="demoreel__title">Ma demo reel 2023</h2>
 					<div className="video_container">
 						<link rel="stylesheet" href="https://video-react.github.io/assets/video-react.css" />
-						<Player poster="images/miniatures/miniature_demoreel.png">
-							<source src="FILM/Demoreel_2023_job.mp4" />
+						<Player poster={pathMiniatures + "/miniature_demoreel.png"}>
+							<source src={pathFilms + "/demoreel_2023.mp4"} />
 						</Player>
 					</div>
 				</div>
@@ -73,8 +76,8 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 						<TitleMovie reverse={true}>3020</TitleMovie>
 						<ProjectContainer reverse={true}>
 							<ProjectImage>
-								<Player poster="images/miniatures/miniature_3020_169.png">
-									<source src="FILM/3020.mp4" />
+								<Player poster={pathMiniatures + "/3020-169.png"}>
+									<source src={pathFilms + "/3020.mp4"} />
 								</Player>
 							</ProjectImage>
 							<div>
@@ -108,8 +111,8 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 						<TitleMovie reverse={false}>PEDILUVE</TitleMovie>
 						<ProjectContainer reverse={false}>
 							<ProjectImage>
-								<Player poster="images/miniatures/miniature_P_169.png">
-									<source src="FILM/PEDILUVE.mp4" />
+								<Player poster={pathMiniatures + "/pediluve.png"}>
+									<source src={pathFilms + "/pediluve.mp4"} />
 								</Player>
 							</ProjectImage>
 							<div>
@@ -141,8 +144,8 @@ const Animation2D = ({ getTheCurrentPage, is3020 }) => {
 						<TitleMovie reverse={true}>Comment je me suis fait virer</TitleMovie>
 						<ProjectContainer reverse={true}>
 							<ProjectImage>
-								<Player poster="images/miniatures/miniature_cjmsfv.png">
-									<source src="FILM/cjmsfv.mp4" />
+								<Player poster={pathMiniatures + "/miniature_cjmsfv.png"}>
+									<source src={pathFilms + "/cjmsfv.mp4"} />
 								</Player>
 							</ProjectImage>
 							<div>

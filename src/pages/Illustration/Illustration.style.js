@@ -33,7 +33,7 @@ export const IllustrationContainer = styled.div`
     }
 
     @media only screen and (min-width: 1440px) {
-        margin-top: 2.5vw;
+        margin-top: 1.5vw;
         font-size: 4vw;
         letter-spacing: 2px;
     }
@@ -88,6 +88,7 @@ export const IllustrationContainer = styled.div`
             position: absolute;
             top: -16.65vw;
             right: -16.65vw;
+            opacity: 0;
         }
     }
 

@@ -67,6 +67,7 @@ const Illustration = ({ getTheCurrentPage, is3020 }) => {
 					{images.map((src, index) => (
 						<div className="image__container">
 							<Image
+								lazy
 								key={src}
 								src={src}
 								onClick={() => setPreviewIndex(index)} // Mettre à jour l'index lors du clic

@@ -27,7 +27,7 @@ const Contact = ({ getTheCurrentPage, is3020 }) => {
 				</DownloadButton>
 			</TitleContainer>
 			<CvContainer>
-				<Image src="images/cv/CV_2023.png" className="image" />
+				<Image lazy src="images/cv/CV_2023.png" className="image" />
 			</CvContainer>
 		</ContactContainer>
 	);

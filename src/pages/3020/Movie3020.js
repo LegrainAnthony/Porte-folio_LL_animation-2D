@@ -165,8 +165,8 @@ const Movie3020 = ({ getTheCurrentPage, is3020 }) => {
 					l'accompagnement des professeurs et des intervenants.
 				</p>
 				<div className="animatic__container">
-					<Player poster="images/miniatures/miniature_3020.png" playsInline>
-						<source src="videos/3020/3020_animatique.mov" />
+					<Player poster="images/miniatures/miniature_animatique.png" playsInline>
+						<source src="videos/3020/3020_animatique.mp4" />
 					</Player>
 				</div>
 			</RoleContainer>
@@ -277,8 +277,8 @@ const Movie3020 = ({ getTheCurrentPage, is3020 }) => {
 					de préparer les fichiers nécessaires pour le clean ou la colorisation.
 				</p>
 				<div className="animation__container">
-					<Player playsInline>
-						<source src="videos/3020/3020_Animatique.mov" />
+					<Player playsInline poster="images/miniatures/miniature_compilation.png">
+						<source src="videos/3020/3020_compilation_animation.mp4" />
 					</Player>
 				</div>
 
@@ -295,7 +295,7 @@ const Movie3020 = ({ getTheCurrentPage, is3020 }) => {
 					After Effects.
 				</p>
 				<div className="animation__container">
-					<Player playsInline>
+					<Player playsInline poster="images/miniatures/miniature_compositing.png">
 						<source src="videos/3020/compositing.mp4" />
 					</Player>
 				</div>

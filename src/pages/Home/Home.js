@@ -39,7 +39,6 @@ function Home({ getTheCurrentPage, is3020 }) {
 						onMouseEnter={playVideo}
 						onMouseLeave={stopAndResetVideo}
 						onClick={() => {
-							console.log("ici");
 							navigate("/Animation2D");
 						}}
 					>

@@ -162,10 +162,10 @@ export const NavbarLink = styled(Link)`
 
   @media only screen and (min-width: 1440px) {
     margin-right: 5rem;
-    font-size: 1vw;
+    font-size: 1.3vw;
 
     .image-3020 {
-      width: 2vw;
+      width: 2.9vw;
     }
     position: relative;
     &::after {

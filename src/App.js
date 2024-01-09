@@ -12,13 +12,14 @@ import Cjmsfv from "./pages/CJMSFV/Cjmsfv";
 import Navigation from "./components/Header/Header";
 import { AppContainer } from "./App.style.js";
 import Footer from "./components/Footer/Footer.js";
+import { useLocation } from "react-router-dom";
 
 function App() {
 	const [lock, setLock] = useState(true);
 
 	const [is3020Page, setIs3020page] = useState(false);
 	const [isHomePage, setIsHomePage] = useState(false);
-
+	const location = useLocation();
 	function getTheCurrentPage() {
 		let loc = window.location.pathname;
 		if (loc === "/Movie3020") {
@@ -34,6 +35,10 @@ function App() {
 		setIs3020page(false);
 		setIsHomePage(false);
 	}
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location]);
 
 	useEffect(() => {
 		getTheCurrentPage();

@@ -48,7 +48,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const DownloadButton = styled.div`
-    margin-bottom: 10vw;
+    margin-bottom: 3vw;
 
     .download__link {
       color: #89354A;
@@ -58,7 +58,7 @@ export const DownloadButton = styled.div`
     }
 
     @media only screen and (min-width: 768px) {
-      margin-bottom: 6vw;
+      margin-bottom: 3vw;
 
       .download__link {
         font-size: 2.5vw;
@@ -66,7 +66,7 @@ export const DownloadButton = styled.div`
     };
 
     @media only screen and (min-width: 1440px) {
-      margin-bottom: 4vw;
+      margin-bottom: 2vw;
 
       .download__link {
       font-size: 1.5vw;
@@ -80,6 +80,7 @@ export const CvContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 5vw;
+    margin-top: 5vw;
 
     .ant-image {
       width: 90%;
@@ -90,12 +91,14 @@ export const CvContainer = styled.div`
     }
 
     @media only screen and (min-width: 768px) {
+      margin-top: 3vw;
       .ant-image {
         width: 80%;
       }
     };
 
     @media only screen and (min-width: 1440px) {
+      margin-top: 1.5vw;
       .ant-image {
         width: 50%;
       }

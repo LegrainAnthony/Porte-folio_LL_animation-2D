@@ -21,8 +21,17 @@ const Contact = ({ getTheCurrentPage, is3020 }) => {
 					<h2 className="title">Mon CV</h2>
 				</PageTitle>
 				<DownloadButton>
-					<a className="download__link" href="pdf/CV_2023.pdf" download="Louise_Levasseur_CV_2023.pdf">
+					<a className="download__link" href="pdf/CV_2024.pdf" download="Louise_Levasseur_CV_2024.pdf">
 						Télécharger mon CV
+					</a>
+				</DownloadButton>
+				<DownloadButton>
+					<a
+						className="download__link"
+						href="pdf/Recommandation_-ENCLUME_ANIMATION-_Louise_LEVASSEUR.pdf"
+						download="Recommandation_-ENCLUME_ANIMATION-_Louise_LEVASSEUR.pdf"
+					>
+						Télécharger ma lettre de recommandation
 					</a>
 				</DownloadButton>
 			</TitleContainer>

@@ -247,22 +247,23 @@ export const SeeMoreContainer = styled.div`
         display: flex;
         align-items: center;
         margin-top: 5vw;
-        max-width: 25%;
-        justify-content: space-between;
+        margin-bottom: ${(props) => (!props.center ? "0" : "5vw")};
+        justify-content: ${(props) => (!props.center ? "none" : "center")};
+        opacity: ${(props) => (!props.visible ? "0" : "1")};
+        transition: opacity 0.4s ease-in-out;
 
         @media only screen and (min-width: 768px) {
-            justify-content: none;
-            max-width: 15vw;
-            margin-right: ${(props) => (props.reverse ? "0rem" : "30%")};
+ 
+        
+            margin-right: ${(props) => (props.reverse || props.center ? "0rem" : "30%")};
             margin-top: ${(props) => (props.seeMore3020 ? "4vw" : "6vw")};
         }
 
 
         @media only screen and (min-width: 1440px) {
-            justify-content: none;
-            max-width: 12%;
-            margin-top: 2vw;
-            margin-right: ${(props) => (props.reverse ? "0rem" : "34%")};
+  
+      
+            margin-right: ${(props) => (props.reverse || props.center ? "0rem" : "34%")};
             margin-top: ${(props) => (props.seeMore3020 ? "3vw" : "5vw")};
             cursor: pointer;
         }
@@ -345,64 +346,106 @@ export const DescriptionContainer = styled.div`
     padding: 0 5vw;
     color: #89354A;
     font-size: 4.5vw;
-    transition: all 0.5s ease;
+    transition: max-height 1s ease;
     background-color: #ffd9d8;
-    height: ${(props) => (!props.openDescribe ? "0vw" : "40vw")};
+    max-height: ${(props) => (!props.openDescribe ? "0vw" : "200vw")};
     font-family: 'PPWoodland';
     overflow: hidden;
     width: 100%;
-    p:first-child{
-        padding-bottom: 1rem;
-    }
 
-    .see3020 {
-        padding-top: 2rem;
-        .link {
-            text-decoration: none;
-            font-family: 'Special Elite';
-            position: relative;
-            color: #551A8B;    
-        }
-    }
+  
+ 
+
 
      @media only screen and (min-width: 768px) {
             font-size: 2.5vw;
-            height: ${(props) => (!props.openDescribe ? "0vw" : "16vw")};
-            p:first-child{
-                padding-top: 2.5vw;
-            }   
-
-            .see3020 {
-                padding-top: 1.5vw;
-            } 
     }
 
     @media only screen and (min-width: 1440px) {
         font-size: 1.5vw;
-        height: ${(props) => (!props.openDescribe ? "0vw" : "12vw")};
 
+        
+    }
+    
 
-        .see3020 {
-        .link {
-            font-size: 1.4vw;
-            &::after {
-                content: "";
-                position: absolute;
-                width: 0%;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                transition: 0.2s ease-in-out;
-                background-color: #551A8B;
-           
+`;
+
+export const SubDescription = styled.div`
+    margin-bottom: 5vw;
+    font-size: 4vw;
+        .subdescription__title {
+            font-family: 'Carena';
+          
+            font-weight: 700;
+            margin-right: 2vw;
+        }
+
+        .subdescription__text {
+            font-family: 'PPWoodland';
+        
+            margin-bottom: 3vw;
+
+            a {
+                color: #89354A;
+                text-decoration: none;
+                font-weight: 700;
             }
 
-            &:hover::after {
-                width: 100%;
-            }    
+            .link {
+                text-decoration: none;
+                font-family: "Special Elite";
+                color: #551A8B;
+            }
         }
-    }
-       
-    }
 
+        
+        @media screen and (min-width: 768px) {
+            font-size: 2vw;
+            margin: 3vw 0;
+
+            .subdescription__title {
+            margin-right: 1vw;
+            }
+
+            .subdescription__text {
+                 margin-bottom: 2vw;
+            }
+        }
+
+
+        @media screen and (min-width: 1440px) {
+            font-size: 1.5vw;
+            margin: 3vw 0;
+
+            .subdescription__title {
+            margin-right: 0.5vw;
+        } 
+
+        .subdescription__text {
+            margin-bottom: 1.5vw;
+
+            .see3020 {
+                position: relative;
+                .link {
+                font-size: 1.4vw;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    transition: 0.2s ease-in-out;
+                    background-color: #551A8B;
+            
+                }
+                &:hover::after {
+                    width: 100%;
+                }  
+            }
+        }
+          
+             
+        }   
+        }
 `;

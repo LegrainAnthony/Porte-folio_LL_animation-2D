@@ -13,9 +13,10 @@ import Navigation from "./components/Header/Header";
 import { AppContainer } from "./App.style.js";
 import Footer from "./components/Footer/Footer.js";
 import { useLocation } from "react-router-dom";
+import "video-react/dist/video-react.css"; // import css
 
 function App() {
-	const [lock, setLock] = useState(true);
+	const [lock, setLock] = useState(false);
 
 	const [is3020Page, setIs3020page] = useState(false);
 	const [isHomePage, setIsHomePage] = useState(false);
@@ -40,30 +41,29 @@ function App() {
 		window.scrollTo(0, 0);
 	}, [location]);
 
-	useEffect(() => {
-		getTheCurrentPage();
+	// useEffect(() => {
+	// 	getTheCurrentPage();
 
-		// Fonction pour vérifier le mot de passe
-		const checkPassword = () => {
-			let mdp = prompt(`Le site nécessite un mot de passe`);
-			if (mdp.toLocaleLowerCase() === "louise2024") {
-				setLock(false);
-			} else {
-				alert("mot de passe incorect");
-				checkPassword(); // Redemandez le mot de passe
-			}
-		};
+	// 	// Fonction pour vérifier le mot de passe
+	// 	const checkPassword = () => {
+	// 		let mdp = prompt(`Le site nécessite un mot de passe`);
+	// 		if (mdp.toLocaleLowerCase() === "louise2024") {
+	// 			setLock(false);
+	// 		} else {
+	// 			alert("mot de passe incorect");
+	// 			checkPassword(); // Redemandez le mot de passe
+	// 		}
+	// 	};
 
-		// Déclencher la vérification du mot de passe si lock est true
-		if (lock) {
-			checkPassword();
-		}
-	}, [lock]); // Se déclenche quand la valeur de 'lock' change
+	// 	// Déclencher la vérification du mot de passe si lock est true
+	// 	if (lock) {
+	// 		checkPassword();
+	// 	}
+	// }, [lock]); // Se déclenche quand la valeur de 'lock' change
 
 	if (!lock) {
 		return (
 			<>
-				<link rel="stylesheet" href="https://video-react.github.io/assets/video-react.css" />
 				<AppContainer is3020={is3020Page}>
 					<Navigation is3020={is3020Page} isHome={isHomePage} />
 					<Routes>
